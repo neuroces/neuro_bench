@@ -1,0 +1,2 @@
+question_id,dandi_id,version,asset_path,time_window,unit_subset,notes
+C3-PILOT-001,000458,0.230317.0039,sub-521885/sub-521885_ses-20200709_behavior+ecephys.nwb,,,"Verified streamable pilot asset. Ground truth: awake vs. isoflurane anesthesia (epochs.tags / trials.behavioral_epoch). 30-ch ElectricalSeriesEEG; no LFP series, no spike units. Cat 3 reframed to awake-vs-anesthetized (decided)."

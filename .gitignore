@@ -1,0 +1,26 @@
+# Secrets / env
+.env
+
+# Virtualenv
+.venv/
+venv/
+
+# Caches
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.ruff_cache/
+
+# Downloaded / streamed NWB data
+*.nwb
+data/nwb_cache/
+
+# Build artifacts
+*.egg-info/
+build/
+dist/
+
+# OS
+.DS_Store

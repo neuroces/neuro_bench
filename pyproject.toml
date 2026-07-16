@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuromysterybench"
+version = "0.1.0"
+description = "A BioMysteryBench-style evaluation benchmark for neuroscience AI, built on the DANDI Archive."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Cesar Echavarria" }]
+dependencies = [
+    "dandi>=0.62.0",
+    "pynwb>=2.7.0",
+    "remfile>=0.1.14",
+    "h5py>=3.11.0",
+    "mne>=1.7.0",
+    "scipy>=1.13.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "matplotlib>=3.9.0",
+    "anthropic>=0.30.0",
+    "openai>=1.30.0",
+    "google-generativeai>=0.7.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "jupyter>=1.0.0",
+    "ruff>=0.5.0",
+]
+
+[tool.setuptools]
+packages = ["data", "benchmark", "grading", "agent"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = [
+    "network: tests that require network/DANDI access (deselect with '-m \"not network\"')",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
