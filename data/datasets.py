@@ -1,4 +1,4 @@
-"""Registry of the DANDI datasets used by NeuroMysteryBench.
+"""Registry of the DANDI datasets used by NeuroBench.
 
 Pinning the dataset *version* guarantees reproducible ground truth. Versions
 marked ``None`` still need to be pinned to a published release before that
@@ -65,7 +65,9 @@ def get_dataset(dandi_id: str) -> Dataset:
     try:
         return DATASETS[dandi_id]
     except KeyError as exc:
-        raise KeyError(f"Unknown dataset {dandi_id!r}; known: {sorted(DATASETS)}") from exc
+        raise KeyError(
+            f"Unknown dataset {dandi_id!r}; known: {sorted(DATASETS)}"
+        ) from exc
 
 
 def require_version(dandi_id: str) -> str:

@@ -1,0 +1,88 @@
+{
+  "C2-Q01": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q02": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q03": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q04": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q05": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q06": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q07": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q08": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q09": {
+    "answer": 100.0,
+    "sha256": "43b87f618caab482ebe4976c92bcd6ad308b48055f1c27b4c574f3e31d7683e0"
+  },
+  "C2-Q10": {
+    "answer": {
+      "rheobase": 400.0,
+      "subtype": "Pvalb"
+    },
+    "sha256": "78ea2aad36c838bdbd9f2f74c1dc8d1f8e870951bd90944024f27594f0134b7d"
+  },
+  "C3-Q01": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q02": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q03": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q04": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q05": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q06": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q07": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q08": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q09": {
+    "answer": 1684.09,
+    "sha256": "fd0f261abdffe626cbbc578ce915843688911c4131d3fbd21df1206c54c2aa43"
+  },
+  "C3-Q10": {
+    "answer": {
+      "band": "delta",
+      "state": "anesthetized"
+    },
+    "sha256": "201ee27415529bfecb7f536ca16cb70c515f591010b17daed10d483f170dfed5"
+  }
+}

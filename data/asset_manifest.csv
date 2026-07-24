@@ -1,2 +1,21 @@
 question_id,dandi_id,version,asset_path,time_window,unit_subset,notes
-C3-PILOT-001,000458,0.230317.0039,sub-521885/sub-521885_ses-20200709_behavior+ecephys.nwb,,,"Verified streamable pilot asset. Ground truth: awake vs. isoflurane anesthesia (epochs.tags / trials.behavioral_epoch). 30-ch ElectricalSeriesEEG; no LFP series, no spike units. Cat 3 reframed to awake-vs-anesthetized (decided)."
+C3-Q01,000458,0.230317.0039,sub-521885/sub-521885_ses-20200709_behavior+ecephys.nwb,600-630,,awake window
+C3-Q02,000458,0.230317.0039,sub-521885/sub-521885_ses-20200709_behavior+ecephys.nwb,1900-1930,,isoflurane_anesthesia window
+C3-Q03,000458,0.230317.0039,sub-521886/sub-521886_ses-20200716_behavior+ecephys.nwb,800-830,,awake window
+C3-Q04,000458,0.230317.0039,sub-551399/sub-551399_ses-20210128_behavior+ecephys.nwb,2210-2240,,isoflurane_anesthesia window (delta-dominant)
+C3-Q05,000458,0.230317.0039,sub-521887/sub-521887_ses-20200730_behavior+ecephys.nwb,500-530,,awake window
+C3-Q06,000458,0.230317.0039,sub-521887/sub-521887_ses-20200730_behavior+ecephys.nwb,1581-1611,,isoflurane_anesthesia window (delta-dominant)
+C3-Q07,000458,0.230317.0039,sub-543393/sub-543393_ses-20200820_behavior+ecephys.nwb,900-930,,awake window
+C3-Q08,000458,0.230317.0039,sub-551397/sub-551397_ses-20210211_behavior+ecephys.nwb,4335-4365,,isoflurane_anesthesia window (delta-dominant)
+C3-Q09,000458,0.230317.0039,sub-543393/sub-543393_ses-20200820_behavior+ecephys.nwb,full,,induction-onset detection (full session)
+C3-Q10,000458,0.230317.0039,sub-546655/sub-546655_ses-20201023_behavior+ecephys.nwb,3502-3532,,"multi-part: state + dominant band"
+C2-Q01,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-10_slice-20200413-slice-2_cell-20200413-sample-10_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q02,000035,0.211014.0808,sub-mouse-INETJ/sub-mouse-INETJ_ses-20200407-sample-10_slice-20200407-slice-1_cell-20200407-sample-10_icephys.nwb,,,Sst interneuron subtype
+C2-Q03,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-11_slice-20200413-slice-2_cell-20200413-sample-11_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q04,000035,0.211014.0808,sub-mouse-KIYRP/sub-mouse-KIYRP_ses-20200403-sample-10_slice-20200403-slice-3_cell-20200403-sample-10_icephys.nwb,,,Sst interneuron subtype
+C2-Q05,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-12_slice-20200413-slice-2_cell-20200413-sample-12_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q06,000035,0.211014.0808,sub-mouse-MITSU/sub-mouse-MITSU_ses-20200410-sample-10_slice-20200410-slice-1_cell-20200410-sample-10_icephys.nwb,,,Sst interneuron subtype
+C2-Q07,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-13_slice-20200413-slice-2_cell-20200413-sample-13_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q08,000035,0.211014.0808,sub-mouse-NDKCQ/sub-mouse-NDKCQ_ses-20200409-sample-10_slice-20200409-slice-2_cell-20200409-sample-10_icephys.nwb,,,Sst interneuron subtype
+C2-Q09,000035,0.211014.0808,sub-mouse-INETJ/sub-mouse-INETJ_ses-20200407-sample-10_slice-20200407-slice-1_cell-20200407-sample-10_icephys.nwb,,,rheobase (numeric)
+C2-Q10,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-10_slice-20200413-slice-2_cell-20200413-sample-10_icephys.nwb,,,"multi-part: subtype + rheobase"

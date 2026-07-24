@@ -38,7 +38,9 @@ def verify_row(row: dict[str, str]) -> tuple[bool, str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Verify/prefetch benchmark assets.")
-    parser.add_argument("--verify", action="store_true", help="Resolve and open each asset.")
+    parser.add_argument(
+        "--verify", action="store_true", help="Resolve and open each asset."
+    )
     parser.add_argument("--dandi-id", help="Only process rows for this dandiset.")
     args = parser.parse_args()
 
@@ -59,7 +61,9 @@ def main() -> int:
         ok, msg = verify_row(row)
         status = "OK  " if ok else "FAIL"
         failures += 0 if ok else 1
-        print(f"[{status}] {row['question_id']:<16} {row['dandi_id']} {row['asset_path']}  {msg}")
+        print(
+            f"[{status}] {row['question_id']:<16} {row['dandi_id']} {row['asset_path']}  {msg}"
+        )
 
     print(f"\n{len(rows) - failures}/{len(rows)} assets verified.")
     return 1 if failures else 0

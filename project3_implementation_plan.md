@@ -1,4 +1,4 @@
-# NeuroMysteryBench — Implementation Plan
+# NeuroBench — Implementation Plan
 
 Staged development plan for building the benchmark described in `project3_plan.md`.
 
@@ -147,7 +147,7 @@ Per category, repeat Stages 1–3 patterns (manifest rows, dataset-explorer sect
 **Goal:** Ship the public artifact.
 
 - `analysis/comparison_report.ipynb`: accuracy by category/model, partial-credit, trajectory qualitative analysis, model-vs-human plots.
-- `paper/neuromysterybench.md`: arXiv-style write-up.
+- `paper/neurobench.md`: arXiv-style write-up.
 - `README.md`: usage, reproduction steps, leaderboard.
 - License, dataset attribution, GitHub publication checklist.
 
@@ -173,8 +173,62 @@ Per category, repeat Stages 1–3 patterns (manifest rows, dataset-explorer sect
 | 6 (analysis/publish) | Stage 10 |
 | (added) demo notebooks | Stages 2, 7 |
 
+## Progress log
+
+- **Stage 0–4 complete** (data layer, question set + verification, tool engine).
+- **Harness decision:** adopted **Inspect AI** for the eval framework (see
+  `docs/harness_evaluation.md`).
+- **Stage 5 (grading) complete:** pure engine in `grading/` (numeric tolerance,
+  Jaccard partial credit, mcq/exact/numeric/multi dispatch) wrapped by an Inspect
+  `scorer` (`agent/scorers.py`). Fully offline-tested.
+- **Stage 6 (agent runner) largely delivered via Inspect:** `agent/dataset.py`
+  (questions → Samples), `agent/task.py` (setup solver + `react` agent + scorer),
+  `agent/inspect_tools.py` (@tool wrappers over the tested `ToolSession`),
+  `agent/context.py` (sample-scoped redaction context). Validated end-to-end
+  offline (scripted mock) and with the full react+tools loop over real data.
+- **Remaining for Stage 6/9:** real-model runs (needs API keys) + `inspect view`
+  trajectory review; optional `human_cli` baseline.
+- **Stage 7 (demo notebooks) complete:** `01_dataset_explorer`, `02_sample_questions`
+  (reference analysis + verification, incl. anesthesia-onset detection), and
+  `03_grading_and_eval` (grading modes, simulated-model report, Inspect-harness
+  scoring, model-vs-human template). All executed end-to-end, 0 errors.
+- **Question refinement (Stage 7):** Q09 reframed from induction-onset (gas-on,
+  not EEG-resolvable within tight tolerance) to **anesthesia onset** (isoflurane
+  _anesthesia epoch start, 1684.09 s, ±120 s); added `anesthesia_onset_time`
+  resolver. Reference detector uses the delta-power surge (detected 1710 s ✓).
+- **Stage 8 (Category 2) complete:** 10 patch-seq questions on DANDI:000035.
+  Audit correction — ground truth is the **Cre genotype** (not an embedded
+  t-type), and the dataset's cells are **Sst vs Pvalb** interneurons, so Cat 2 is
+  fast-spiking (Pvalb) vs adapting (Sst) classification + rheobase. Added
+  resolvers `cell_subtype`/`cell_class`/`rheobase`/`firing_rate_at_current`,
+  icephys `ToolSession` tools (`list_current_clamp_sweeps`,
+  `get_current_clamp_sweep`), `subject` redaction, and category-based tool
+  selection. 20/20 answers verified; Cat-2 react loop validated.
+- **Stage 9 (first real run):** ran Claude `claude-sonnet-5` on a 3-question Cat-3
+  sample via `agent/run_benchmark.py`. Found + fixed a grading bug: the `react`
+  agent submits prose, so verbose answers ("A) Awake — ...") were mis-scored 0;
+  `extract_answer` now recovers the choice letter. Sample result: **2/3**
+  (Q01✓ Q02✓ Q03✗). Refinement flags: Q03 is a genuine model miss (awake-like
+  spectrum); **Q04 is spectrally atypical** for anesthesia (alpha-dominant,
+  delta/total 0.17) — review/swap before scaling up. Model access: valid ids are
+  e.g. `claude-sonnet-5` (not `claude-3-5-sonnet-latest`, which 404s).
+- **Anesthesia-window refinement:** audited all Cat-3 anesthesia windows by
+  delta/total. sub-521886 (Q04) was alpha/spindle-dominated throughout (max 0.25)
+  so Q04 moved to **sub-551399 @ 2210 s (0.99)**; Q08 moved to **sub-551397 @
+  4335 s (0.59)**; Q06 → **1581 s (0.76)**; Q10 → **3502 s (0.89)**; Q02 kept
+  (0.78). All still verify as anesthetized (Q10 delta). 64 offline tests pass.
+- **Full 20-question run (claude-sonnet-5):** overall **0.70** — Cat-3 **0.90**
+  (9/10; only Q07 missed), Cat-2 **0.50** (5/10). Notable finding: the model has
+  a **Pvalb bias** — it labeled all 4 Sst cells as Pvalb (0/4 Sst, 3/4 Pvalb);
+  rheobase + multi-part correct. Two more harness bugs found & fixed: (1) multi
+  answer hint now lists the real part keys (was "key1/key2" → Q10 mis-scored);
+  (2) extraction tolerates `<answer>` tags / stray `</invoke>` (was scoring a
+  correct C3-Q01 as `</invoke>`). Also: `@tool` wrappers now return errors
+  gracefully and the runner uses `fail_on_error=False` + `max_samples` (20
+  concurrent samples thrashed DANDI streaming). 65 offline tests pass.
+
 ## Open items to confirm before Stage 8+
 
-- Sandbox strategy for `run_python` (subprocess vs container) given untrusted model-generated code.
+- Swap `run_python`'s subprocess sandbox for Inspect's **Docker** sandbox (hardening).
 - Human-baseline recruitment feasibility (3–5 neuro PhDs) — affects Stage 9 timeline.
 - Exact pinned versions for 000409 / 000552 (largest / hardest datasets).

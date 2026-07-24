@@ -1,0 +1,27 @@
+{
+  "model": "anthropic/claude-sonnet-5",
+  "arch": "react",
+  "category": 3,
+  "n_questions": 2,
+  "mean_score": 0.5,
+  "status": "success",
+  "log_location": "/Users/cechava/Documents/neuro_bench/logs/2026-07-23T21-39-52-00-00_neurobench_EN9EDAtNQ5sDFU64J7BEoV.eval",
+  "results": [
+    {
+      "id": "C3-Q01",
+      "category": 3,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "B",
+      "truth": "awake"
+    },
+    {
+      "id": "C3-Q02",
+      "category": 3,
+      "answer_type": "mcq",
+      "score": 1.0,
+      "answer": "B",
+      "truth": "anesthetized"
+    }
+  ]
+}

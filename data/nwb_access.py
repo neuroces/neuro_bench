@@ -76,7 +76,9 @@ def _retry(fn, *, what: str):
             last_exc = exc
             if attempt < _MAX_RETRIES - 1:
                 time.sleep(_BACKOFF_BASE_SECONDS * (2**attempt))
-    raise NWBAccessError(f"Failed to {what} after {_MAX_RETRIES} attempts") from last_exc
+    raise NWBAccessError(
+        f"Failed to {what} after {_MAX_RETRIES} attempts"
+    ) from last_exc
 
 
 def get_dandiset(dandi_id: str, version: str):

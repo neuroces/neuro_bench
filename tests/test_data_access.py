@@ -6,7 +6,6 @@ import csv
 from pathlib import Path
 
 import pytest
-
 from data import datasets, nwb_access
 
 MANIFEST = Path(__file__).parent.parent / "data" / "asset_manifest.csv"

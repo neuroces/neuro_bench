@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://neurobench/benchmark/questions.schema.json",
+  "title": "NeuroBench questions",
+  "type": "array",
+  "items": { "$ref": "#/definitions/question" },
+  "definitions": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dandi_id", "version", "asset_path"],
+      "properties": {
+        "dandi_id": { "type": "string" },
+        "version": { "type": "string" },
+        "asset_path": { "type": "string" },
+        "channel": { "type": ["integer", "null"] },
+        "window": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["start_s", "duration_s"],
+          "properties": {
+            "start_s": { "type": "number" },
+            "duration_s": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        }
+      }
+    },
+    "ground_truth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "state_at_window",
+            "induction_onset_time",
+            "anesthesia_onset_time",
+            "eeg_channel_count",
+            "dominant_band",
+            "cell_subtype",
+            "cell_class",
+            "rheobase",
+            "firing_rate_at_current"
+          ]
+        },
+        "params": { "type": "object" }
+      }
+    },
+    "part": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "prompt", "answer_type", "ground_truth"],
+      "properties": {
+        "key": { "type": "string" },
+        "prompt": { "type": "string" },
+        "answer_type": { "type": "string", "enum": ["mcq", "exact", "numeric"] },
+        "choices": { "type": "object", "additionalProperties": { "type": "string" } },
+        "tolerance": { "type": "number", "minimum": 0 },
+        "points": { "type": "number", "exclusiveMinimum": 0 },
+        "ground_truth": { "$ref": "#/definitions/ground_truth" }
+      }
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "category", "prompt", "source", "answer_type"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^C[0-9]+-Q[0-9]+$" },
+        "category": { "type": "integer" },
+        "title": { "type": "string" },
+        "prompt": { "type": "string" },
+        "source": { "$ref": "#/definitions/source" },
+        "redaction": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["intervals", "units", "processing", "subject"] }
+        },
+        "answer_type": { "type": "string", "enum": ["mcq", "exact", "numeric", "multi"] },
+        "choices": { "type": "object", "additionalProperties": { "type": "string" } },
+        "tolerance": { "type": "number", "minimum": 0 },
+        "points": { "type": "number", "exclusiveMinimum": 0 },
+        "ground_truth": { "$ref": "#/definitions/ground_truth" },
+        "parts": { "type": "array", "items": { "$ref": "#/definitions/part" }, "minItems": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "answer_type": { "const": "multi" } } },
+          "then": { "required": ["parts"] },
+          "else": { "required": ["ground_truth"] }
+        },
+        {
+          "if": { "properties": { "answer_type": { "const": "mcq" } } },
+          "then": { "required": ["choices"] }
+        },
+        {
+          "if": { "properties": { "answer_type": { "const": "numeric" } } },
+          "then": { "required": ["tolerance"] }
+        }
+      ]
+    }
+  }
+}

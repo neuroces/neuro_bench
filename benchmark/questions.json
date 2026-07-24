@@ -1,0 +1,250 @@
+[
+  {
+    "id": "C3-Q01",
+    "category": 3,
+    "title": "Brain state @ 600s (sub-521885)",
+    "prompt": "The provided EEG recording (channel 0) is a 30-second epoch beginning at t=600 s from a mouse cortical EEG session. The experimental state labels have been withheld. Compute the power spectral density of this epoch and, based on its spectral signature, classify the animal's brain state. Is the animal (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-521885/sub-521885_ses-20200709_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 600.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 600.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q02",
+    "category": 3,
+    "title": "Brain state @ 1900s (sub-521885)",
+    "prompt": "The provided EEG recording (channel 0) is a 30-second epoch beginning at t=1900 s from a mouse cortical EEG session, with state labels withheld. From the spectral properties of this epoch, classify the brain state: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-521885/sub-521885_ses-20200709_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 1900.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 1900.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q03",
+    "category": 3,
+    "title": "Brain state @ 800s (sub-521886)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=800 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-521886/sub-521886_ses-20200716_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 800.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 800.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q04",
+    "category": 3,
+    "title": "Brain state @ 2210s (sub-551399)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2210 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-551399/sub-551399_ses-20210128_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2210.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2210.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q05",
+    "category": 3,
+    "title": "Brain state @ 500s (sub-521887)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=500 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-521887/sub-521887_ses-20200730_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 500.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 500.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q06",
+    "category": 3,
+    "title": "Brain state @ 1581s (sub-521887)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=1581 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-521887/sub-521887_ses-20200730_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 1581.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 1581.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q07",
+    "category": 3,
+    "title": "Brain state @ 900s (sub-543393)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=900 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-543393/sub-543393_ses-20200820_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 900.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 900.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q08",
+    "category": 3,
+    "title": "Brain state @ 4335s (sub-551397)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=4335 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-551397/sub-551397_ses-20210211_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 4335.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 4335.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q09",
+    "category": 3,
+    "title": "Detect anesthesia onset (sub-543393)",
+    "prompt": "You are given the full-session EEG (channel 0) for a mouse that began awake and later received isoflurane. All state labels have been withheld. The transition into stable isoflurane anesthesia produces a characteristic, sustained shift toward high-amplitude, low-frequency (delta) EEG activity. Analyze the recording and estimate the recording time (in seconds) at which the animal enters stable anesthesia. Report a single number in seconds.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-543393/sub-543393_ses-20200820_behavior+ecephys.nwb", "channel": 0, "window": null},
+    "redaction": ["intervals"],
+    "answer_type": "numeric",
+    "tolerance": 120.0,
+    "ground_truth": {"method": "anesthesia_onset_time", "params": {}}
+  },
+  {
+    "id": "C3-Q10",
+    "category": 3,
+    "title": "State + dominant band @ 3502s (sub-546655)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=3502 s is provided from a mouse cortical recording, labels withheld. (1) Classify the brain state: (A) awake or (B) under isoflurane anesthesia. (2) Using the power spectral density, identify which canonical frequency band carries the most power in this epoch: (A) delta 0.5-4 Hz, (B) theta 4-8 Hz, (C) alpha 8-13 Hz, or (D) beta 13-30 Hz.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-546655/sub-546655_ses-20201023_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 3502.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "multi",
+    "parts": [
+      {
+        "key": "state",
+        "prompt": "Classify the brain state.",
+        "answer_type": "mcq",
+        "choices": {"A": "awake", "B": "anesthetized"},
+        "ground_truth": {"method": "state_at_window", "params": {"start_s": 3502.0, "duration_s": 30.0}}
+      },
+      {
+        "key": "band",
+        "prompt": "Identify the dominant canonical frequency band.",
+        "answer_type": "mcq",
+        "choices": {"A": "delta", "B": "theta", "C": "alpha", "D": "beta"},
+        "ground_truth": {"method": "dominant_band", "params": {"start_s": 3502.0, "duration_s": 30.0, "channel": 0}}
+      }
+    ]
+  },
+  {
+    "id": "C2-Q01",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron, stimulated with a series of square current steps. The Cre-line label is withheld. Based on the electrophysiological properties (action-potential width, firing-pattern adaptation, rheobase, and F-I curve), classify the interneuron subtype: (A) Sst (somatostatin; adapting, broader spikes) or (B) Pvalb (parvalbumin; fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-10_slice-20200413-slice-2_cell-20200413-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q02",
+    "category": 2,
+    "title": "Interneuron subtype (INETJ sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-INETJ/sub-mouse-INETJ_ses-20200407-sample-10_slice-20200407-slice-1_cell-20200407-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q03",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-11)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-11_slice-20200413-slice-2_cell-20200413-sample-11_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q04",
+    "category": 2,
+    "title": "Interneuron subtype (KIYRP sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-KIYRP/sub-mouse-KIYRP_ses-20200403-sample-10_slice-20200403-slice-3_cell-20200403-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q05",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-12)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-12_slice-20200413-slice-2_cell-20200413-sample-12_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q06",
+    "category": 2,
+    "title": "Interneuron subtype (MITSU sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-MITSU/sub-mouse-MITSU_ses-20200410-sample-10_slice-20200410-slice-1_cell-20200410-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q07",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-13)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-13_slice-20200413-slice-2_cell-20200413-sample-13_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q08",
+    "category": 2,
+    "title": "Interneuron subtype (NDKCQ sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-NDKCQ/sub-mouse-NDKCQ_ses-20200409-sample-10_slice-20200409-slice-2_cell-20200409-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q09",
+    "category": 2,
+    "title": "Rheobase (INETJ sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron, stimulated with square current steps (Cre-line label withheld). Determine the cell's rheobase — the smallest positive current step (in pA) that elicits at least one action potential. Report a single number in pA.",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-INETJ/sub-mouse-INETJ_ses-20200407-sample-10_slice-20200407-slice-1_cell-20200407-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "numeric",
+    "tolerance": 40.0,
+    "ground_truth": {"method": "rheobase", "params": {}}
+  },
+  {
+    "id": "C2-Q10",
+    "category": 2,
+    "title": "Subtype + rheobase (UEQOU sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). (1) Classify the subtype: (A) Sst or (B) Pvalb. (2) Determine the rheobase (smallest positive current step in pA that elicits a spike).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-10_slice-20200413-slice-2_cell-20200413-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "multi",
+    "parts": [
+      {
+        "key": "subtype",
+        "prompt": "Classify the interneuron subtype.",
+        "answer_type": "mcq",
+        "choices": {"A": "Sst", "B": "Pvalb"},
+        "ground_truth": {"method": "cell_subtype", "params": {}}
+      },
+      {
+        "key": "rheobase",
+        "prompt": "Report the rheobase in pA.",
+        "answer_type": "numeric",
+        "tolerance": 60.0,
+        "ground_truth": {"method": "rheobase", "params": {}}
+      }
+    ]
+  }
+]
