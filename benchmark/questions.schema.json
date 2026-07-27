@@ -41,7 +41,8 @@
             "cell_subtype",
             "cell_class",
             "rheobase",
-            "firing_rate_at_current"
+            "firing_rate_at_current",
+            "unit_brain_region"
           ]
         },
         "params": { "type": "object" }
@@ -73,7 +74,7 @@
         "source": { "$ref": "#/definitions/source" },
         "redaction": {
           "type": "array",
-          "items": { "type": "string", "enum": ["intervals", "units", "processing", "subject"] }
+          "items": { "type": "string", "enum": ["intervals", "units", "processing", "subject", "electrodes"] }
         },
         "answer_type": { "type": "string", "enum": ["mcq", "exact", "numeric", "multi"] },
         "choices": { "type": "object", "additionalProperties": { "type": "string" } },

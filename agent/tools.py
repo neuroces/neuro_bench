@@ -45,18 +45,14 @@ class ToolSession:
         self.asset_path = asset_path
         self.redaction = set(redaction)
         self.channel_default = channel_default
-        self.window = (
-            window  # optional {"start_s","duration_s"} for run_python exposure
-        )
+        self.window = window  # optional {"start_s","duration_s"} for run_python exposure
         self._nwb = nwb
         self._handle = None
 
     # --- lifecycle -----------------------------------------------------------
 
     @classmethod
-    def from_question(
-        cls, question: dict[str, Any], *, nwb: Any = None
-    ) -> "ToolSession":
+    def from_question(cls, question: dict[str, Any], *, nwb: Any = None) -> "ToolSession":
         src = question["source"]
         return cls(
             dandi_id=src["dandi_id"],
@@ -189,37 +185,55 @@ class ToolSession:
         return {"n_units": len(units), "unit_ids": [int(i) for i in units.id[:]]}
 
     def get_spike_waveforms(self, unit_ids: list[int]) -> dict[str, Any]:
+        """Peak-channel mean waveform (µV) per unit, sampled at ``fs_hz``."""
         self._guard("units")
-        units = getattr(self.nwb(), "units", None)
-        if units is None:
+        nwb = self.nwb()
+        if getattr(nwb, "units", None) is None:
             raise ValueError("No units table in this recording.")
-        df = units.to_dataframe()
         out = {}
         for uid in unit_ids:
-            row = df.loc[uid]
-            wf = row.get("waveform_mean")
-            out[str(uid)] = None if wf is None else [float(x) for x in wf]
-        return {"waveforms": out}
+            wf = ground_truth.unit_waveform_mean(nwb, uid)
+            trace = ground_truth.peak_channel_waveform(wf)
+            out[str(uid)] = [round(float(x), 4) for x in trace]
+        return {"fs_hz": ground_truth.WAVEFORM_FS_HZ, "peak_channel_waveforms": out}
 
-    def compute_isi(self, unit_id: int) -> dict[str, Any]:
-        import numpy as np
-
+    def compute_waveform_features(self, unit_id: int) -> dict[str, Any]:
+        """Peak-channel waveform features (trough-to-peak width) for one unit."""
         self._guard("units")
-        units = getattr(self.nwb(), "units", None)
-        if units is None:
+        nwb = self.nwb()
+        if getattr(nwb, "units", None) is None:
             raise ValueError("No units table in this recording.")
-        spikes = np.asarray(
-            units.to_dataframe().loc[unit_id]["spike_times"], dtype=float
-        )
-        isi = np.diff(np.sort(spikes))
+        wf = ground_truth.unit_waveform_mean(nwb, unit_id)
         return {
             "unit_id": unit_id,
-            "n_spikes": int(spikes.size),
-            "mean_isi_s": float(isi.mean()) if isi.size else None,
-            "cv_isi": (
-                float(isi.std() / isi.mean()) if isi.size and isi.mean() else None
-            ),
+            "peak_trough_width_ms": ground_truth.waveform_peak_trough_width_ms(wf),
+            "fs_hz": ground_truth.WAVEFORM_FS_HZ,
         }
+
+    def compute_firing_rate(
+        self, unit_id: int, start_s: float | None = None, stop_s: float | None = None
+    ) -> dict[str, Any]:
+        """Mean firing rate (Hz) of one unit over an interval (default: full span)."""
+        self._guard("units")
+        nwb = self.nwb()
+        if getattr(nwb, "units", None) is None:
+            raise ValueError("No units table in this recording.")
+        st = ground_truth.unit_spike_times(nwb, unit_id)
+        rate = ground_truth.extracellular_firing_rate(nwb, unit_id, start_s, stop_s)
+        return {
+            "unit_id": unit_id,
+            "firing_rate_hz": rate,
+            "n_spikes": int(st.size),
+            "duration_s": (round(float(st[-1] - st[0]), 3) if st.size > 1 else 0.0),
+        }
+
+    def compute_isi(self, unit_id: int) -> dict[str, Any]:
+        self._guard("units")
+        nwb = self.nwb()
+        if getattr(nwb, "units", None) is None:
+            raise ValueError("No units table in this recording.")
+        stats = ground_truth.unit_isi_stats(nwb, unit_id)
+        return {"unit_id": unit_id, **stats}
 
     def compute_cross_correlogram(
         self, unit_a: int, unit_b: int, bin_s: float = 0.001, window_s: float = 0.05
@@ -320,6 +334,8 @@ TOOL_NAMES = (
     "compute_psd",
     "list_units",
     "get_spike_waveforms",
+    "compute_waveform_features",
+    "compute_firing_rate",
     "compute_isi",
     "compute_cross_correlogram",
     "list_current_clamp_sweeps",

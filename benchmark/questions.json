@@ -124,6 +124,254 @@
     ]
   },
   {
+    "id": "C3-Q11",
+    "category": 3,
+    "title": "Brain state @ 2223.5s (sub-569062)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2223.5 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569062/sub-569062_ses-20210218_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2223.5, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2223.5, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q12",
+    "category": 3,
+    "title": "Brain state @ 2246.5s (sub-569064)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2246.5 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569064/sub-569064_ses-20210408_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2246.5, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2246.5, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q13",
+    "category": 3,
+    "title": "Brain state @ 2140.3s (sub-569068)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2140.3 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569068/sub-569068_ses-20210304_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2140.3, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2140.3, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q14",
+    "category": 3,
+    "title": "Brain state @ 2111.0s (sub-569069)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2111.0 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569069/sub-569069_ses-20210312_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2111.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2111.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q15",
+    "category": 3,
+    "title": "Brain state @ 2202.0s (sub-569072)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2202.0 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569072/sub-569072_ses-20210422_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2202.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2202.0, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q16",
+    "category": 3,
+    "title": "Brain state @ 2290.5s (sub-575102)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2290.5 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-575102/sub-575102_ses-20210603_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2290.5, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2290.5, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q17",
+    "category": 3,
+    "title": "Brain state @ 4406.7s (sub-571619)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=4406.7 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-571619/sub-571619_ses-20210319_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 4406.7, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 4406.7, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q18",
+    "category": 3,
+    "title": "Brain state @ 4817.5s (sub-571620)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=4817.5 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-571620/sub-571620_ses-20210513_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 4817.5, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 4817.5, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q19",
+    "category": 3,
+    "title": "Brain state @ 4780.1s (sub-586466)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=4780.1 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-586466/sub-586466_ses-20210729_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 4780.1, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 4780.1, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q20",
+    "category": 3,
+    "title": "Brain state @ 4645.1s (sub-586468)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=4645.1 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-586468/sub-586468_ses-20210819_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 4645.1, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 4645.1, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q21",
+    "category": 3,
+    "title": "Brain state @ 2955.2s (sub-569072)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2955.2 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569072/sub-569072_ses-20210422_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2955.2, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 2955.2, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q22",
+    "category": 3,
+    "title": "Brain state @ 3035.7s (sub-575102)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=3035.7 s is provided from a mouse cortical recording, labels withheld. Classify the brain state from its spectral signature: (A) awake or (B) under isoflurane anesthesia?",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-575102/sub-575102_ses-20210603_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 3035.7, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "awake", "B": "anesthetized"},
+    "ground_truth": {"method": "state_at_window", "params": {"start_s": 3035.7, "duration_s": 30.0}}
+  },
+  {
+    "id": "C3-Q23",
+    "category": 3,
+    "title": "Dominant band @ 1187.0s (sub-543394)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=1187.0 s is provided from a mouse cortical recording, labels withheld. Using the power spectral density, identify which canonical frequency band carries the most power in this epoch: (A) delta 0.5-4 Hz, (B) theta 4-8 Hz, (C) alpha 8-13 Hz, or (D) beta 13-30 Hz.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-543394/sub-543394_ses-20200827_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 1187.0, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "delta", "B": "theta", "C": "alpha", "D": "beta"},
+    "ground_truth": {"method": "dominant_band", "params": {"start_s": 1187.0, "duration_s": 30.0, "channel": 0}}
+  },
+  {
+    "id": "C3-Q24",
+    "category": 3,
+    "title": "Dominant band @ 1673.5s (sub-569070)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=1673.5 s is provided from a mouse cortical recording, labels withheld. Using the power spectral density, identify which canonical frequency band carries the most power in this epoch: (A) delta 0.5-4 Hz, (B) theta 4-8 Hz, (C) alpha 8-13 Hz, or (D) beta 13-30 Hz.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569070/sub-569070_ses-20210401_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 1673.5, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "delta", "B": "theta", "C": "alpha", "D": "beta"},
+    "ground_truth": {"method": "dominant_band", "params": {"start_s": 1673.5, "duration_s": 30.0, "channel": 0}}
+  },
+  {
+    "id": "C3-Q25",
+    "category": 3,
+    "title": "Dominant band @ 2131.8s (sub-543394)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2131.8 s is provided from a mouse cortical recording, labels withheld. Using the power spectral density, identify which canonical frequency band carries the most power in this epoch: (A) delta 0.5-4 Hz, (B) theta 4-8 Hz, (C) alpha 8-13 Hz, or (D) beta 13-30 Hz.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-543394/sub-543394_ses-20200827_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2131.8, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "delta", "B": "theta", "C": "alpha", "D": "beta"},
+    "ground_truth": {"method": "dominant_band", "params": {"start_s": 2131.8, "duration_s": 30.0, "channel": 0}}
+  },
+  {
+    "id": "C3-Q26",
+    "category": 3,
+    "title": "Dominant band @ 3011.4s (sub-569062)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=3011.4 s is provided from a mouse cortical recording, labels withheld. Using the power spectral density, identify which canonical frequency band carries the most power in this epoch: (A) delta 0.5-4 Hz, (B) theta 4-8 Hz, (C) alpha 8-13 Hz, or (D) beta 13-30 Hz.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569062/sub-569062_ses-20210218_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 3011.4, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "mcq",
+    "choices": {"A": "delta", "B": "theta", "C": "alpha", "D": "beta"},
+    "ground_truth": {"method": "dominant_band", "params": {"start_s": 3011.4, "duration_s": 30.0, "channel": 0}}
+  },
+  {
+    "id": "C3-Q27",
+    "category": 3,
+    "title": "Detect anesthesia onset (sub-543394)",
+    "prompt": "You are given the full-session EEG (channel 0) for a mouse that began awake and later received isoflurane. All state labels have been withheld. The transition into stable isoflurane anesthesia produces a characteristic, sustained shift toward high-amplitude, low-frequency (delta) EEG activity. Analyze the recording and estimate the recording time (in seconds) at which the animal enters stable anesthesia. Report a single number in seconds.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-543394/sub-543394_ses-20200827_behavior+ecephys.nwb", "channel": 0, "window": null},
+    "redaction": ["intervals"],
+    "answer_type": "numeric",
+    "tolerance": 120.0,
+    "ground_truth": {"method": "anesthesia_onset_time", "params": {}}
+  },
+  {
+    "id": "C3-Q28",
+    "category": 3,
+    "title": "Detect anesthesia onset (sub-569064)",
+    "prompt": "You are given the full-session EEG (channel 0) for a mouse that began awake and later received isoflurane. All state labels have been withheld. The transition into stable isoflurane anesthesia produces a characteristic, sustained shift toward high-amplitude, low-frequency (delta) EEG activity. Analyze the recording and estimate the recording time (in seconds) at which the animal enters stable anesthesia. Report a single number in seconds.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569064/sub-569064_ses-20210408_behavior+ecephys.nwb", "channel": 0, "window": null},
+    "redaction": ["intervals"],
+    "answer_type": "numeric",
+    "tolerance": 120.0,
+    "ground_truth": {"method": "anesthesia_onset_time", "params": {}}
+  },
+  {
+    "id": "C3-Q29",
+    "category": 3,
+    "title": "State + dominant band @ 3208.3s (sub-569068)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=3208.3 s is provided from a mouse cortical recording, labels withheld. (1) Classify the brain state: (A) awake or (B) under isoflurane anesthesia. (2) Using the power spectral density, identify which canonical frequency band carries the most power in this epoch: (A) delta 0.5-4 Hz, (B) theta 4-8 Hz, (C) alpha 8-13 Hz, or (D) beta 13-30 Hz.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569068/sub-569068_ses-20210304_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 3208.3, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "multi",
+    "parts": [
+      {
+        "key": "state",
+        "prompt": "Classify the brain state.",
+        "answer_type": "mcq",
+        "choices": {"A": "awake", "B": "anesthetized"},
+        "ground_truth": {"method": "state_at_window", "params": {"start_s": 3208.3, "duration_s": 30.0}}
+      },
+      {
+        "key": "band",
+        "prompt": "Identify the dominant canonical frequency band.",
+        "answer_type": "mcq",
+        "choices": {"A": "delta", "B": "theta", "C": "alpha", "D": "beta"},
+        "ground_truth": {"method": "dominant_band", "params": {"start_s": 3208.3, "duration_s": 30.0, "channel": 0}}
+      }
+    ]
+  },
+  {
+    "id": "C3-Q30",
+    "category": 3,
+    "title": "State + dominant band @ 2493.9s (sub-569070)",
+    "prompt": "A 30-second EEG epoch (channel 0) beginning at t=2493.9 s is provided from a mouse cortical recording, labels withheld. (1) Classify the brain state: (A) awake or (B) under isoflurane anesthesia. (2) Using the power spectral density, identify which canonical frequency band carries the most power in this epoch: (A) delta 0.5-4 Hz, (B) theta 4-8 Hz, (C) alpha 8-13 Hz, or (D) beta 13-30 Hz.",
+    "source": {"dandi_id": "000458", "version": "0.230317.0039", "asset_path": "sub-569070/sub-569070_ses-20210401_behavior+ecephys.nwb", "channel": 0, "window": {"start_s": 2493.9, "duration_s": 30.0}},
+    "redaction": ["intervals"],
+    "answer_type": "multi",
+    "parts": [
+      {
+        "key": "state",
+        "prompt": "Classify the brain state.",
+        "answer_type": "mcq",
+        "choices": {"A": "awake", "B": "anesthetized"},
+        "ground_truth": {"method": "state_at_window", "params": {"start_s": 2493.9, "duration_s": 30.0}}
+      },
+      {
+        "key": "band",
+        "prompt": "Identify the dominant canonical frequency band.",
+        "answer_type": "mcq",
+        "choices": {"A": "delta", "B": "theta", "C": "alpha", "D": "beta"},
+        "ground_truth": {"method": "dominant_band", "params": {"start_s": 2493.9, "duration_s": 30.0, "channel": 0}}
+      }
+    ]
+  },
+  {
     "id": "C2-Q01",
     "category": 2,
     "title": "Interneuron subtype (UEQOU sample-10)",
@@ -246,5 +494,583 @@
         "ground_truth": {"method": "rheobase", "params": {}}
       }
     ]
+  },
+  {
+    "id": "C2-Q11",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-14)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-14_slice-20200413-slice-2_cell-20200413-sample-14_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q12",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-15)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-15_slice-20200413-slice-2_cell-20200413-sample-15_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q13",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-16)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-16_slice-20200413-slice-2_cell-20200413-sample-16_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q14",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-17)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-17_slice-20200413-slice-2_cell-20200413-sample-17_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q15",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-18)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-18_slice-20200413-slice-2_cell-20200413-sample-18_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q16",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-19)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-19_slice-20200413-slice-2_cell-20200413-sample-19_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q17",
+    "category": 2,
+    "title": "Interneuron subtype (UEQOU sample-20)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-20_slice-20200413-slice-3_cell-20200413-sample-20_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q18",
+    "category": 2,
+    "title": "Interneuron subtype (SCEAC sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-10_slice-20200414-slice-2_cell-20200414-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q19",
+    "category": 2,
+    "title": "Interneuron subtype (SCEAC sample-11)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-11_slice-20200414-slice-2_cell-20200414-sample-11_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q20",
+    "category": 2,
+    "title": "Interneuron subtype (SCEAC sample-12)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-12_slice-20200414-slice-3_cell-20200414-sample-12_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q21",
+    "category": 2,
+    "title": "Interneuron subtype (WPOGH sample-10)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-WPOGH/sub-mouse-WPOGH_ses-20200406-sample-10_slice-20200406-slice-3_cell-20200406-sample-10_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q22",
+    "category": 2,
+    "title": "Interneuron subtype (WPOGH sample-11)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-WPOGH/sub-mouse-WPOGH_ses-20200406-sample-11_slice-20200406-slice-3_cell-20200406-sample-11_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q23",
+    "category": 2,
+    "title": "Interneuron subtype (ZUDOB sample-11)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-11_slice-20200408-slice-3_cell-20200408-sample-11_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q24",
+    "category": 2,
+    "title": "Interneuron subtype (ZUDOB sample-12)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). From the electrophysiology (AP width, adaptation, rheobase, F-I curve), classify the subtype: (A) Sst (adapting, broader spikes) or (B) Pvalb (fast-spiking, narrow spikes).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-12_slice-20200408-slice-3_cell-20200408-sample-12_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "mcq",
+    "choices": {"A": "Sst", "B": "Pvalb"},
+    "ground_truth": {"method": "cell_subtype", "params": {}}
+  },
+  {
+    "id": "C2-Q25",
+    "category": 2,
+    "title": "Rheobase (UEQOU sample-22)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron, stimulated with square current steps (Cre-line label withheld). Determine the cell's rheobase — the smallest positive current step (in pA) that elicits at least one action potential. Report a single number in pA.",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-22_slice-20200413-slice-3_cell-20200413-sample-22_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "numeric",
+    "tolerance": 40.0,
+    "ground_truth": {"method": "rheobase", "params": {}}
+  },
+  {
+    "id": "C2-Q26",
+    "category": 2,
+    "title": "Rheobase (WPOGH sample-12)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron, stimulated with square current steps (Cre-line label withheld). Determine the cell's rheobase — the smallest positive current step (in pA) that elicits at least one action potential. Report a single number in pA.",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-WPOGH/sub-mouse-WPOGH_ses-20200406-sample-12_slice-20200406-slice-4_cell-20200406-sample-12_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "numeric",
+    "tolerance": 40.0,
+    "ground_truth": {"method": "rheobase", "params": {}}
+  },
+  {
+    "id": "C2-Q27",
+    "category": 2,
+    "title": "Rheobase (ZUDOB sample-14)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron, stimulated with square current steps (Cre-line label withheld). Determine the cell's rheobase — the smallest positive current step (in pA) that elicits at least one action potential. Report a single number in pA.",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-14_slice-20200408-slice-3_cell-20200408-sample-14_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "numeric",
+    "tolerance": 40.0,
+    "ground_truth": {"method": "rheobase", "params": {}}
+  },
+  {
+    "id": "C2-Q28",
+    "category": 2,
+    "title": "Rheobase (SCEAC sample-13)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron, stimulated with square current steps (Cre-line label withheld). Determine the cell's rheobase — the smallest positive current step (in pA) that elicits at least one action potential. Report a single number in pA.",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-13_slice-20200414-slice-3_cell-20200414-sample-13_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "numeric",
+    "tolerance": 40.0,
+    "ground_truth": {"method": "rheobase", "params": {}}
+  },
+  {
+    "id": "C2-Q29",
+    "category": 2,
+    "title": "Subtype + rheobase (UEQOU sample-21)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). (1) Classify the subtype: (A) Sst or (B) Pvalb. (2) Determine the rheobase (smallest positive current step in pA that elicits a spike).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-21_slice-20200413-slice-3_cell-20200413-sample-21_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "multi",
+    "parts": [
+      {
+        "key": "subtype",
+        "prompt": "Classify the interneuron subtype.",
+        "answer_type": "mcq",
+        "choices": {"A": "Sst", "B": "Pvalb"},
+        "ground_truth": {"method": "cell_subtype", "params": {}}
+      },
+      {
+        "key": "rheobase",
+        "prompt": "Report the rheobase in pA.",
+        "answer_type": "numeric",
+        "tolerance": 60.0,
+        "ground_truth": {"method": "rheobase", "params": {}}
+      }
+    ]
+  },
+  {
+    "id": "C2-Q30",
+    "category": 2,
+    "title": "Subtype + rheobase (ZUDOB sample-13)",
+    "prompt": "The attached NWB file is a whole-cell current-clamp recording from a single mouse cortical interneuron (Cre-line label withheld). (1) Classify the subtype: (A) Sst or (B) Pvalb. (2) Determine the rheobase (smallest positive current step in pA that elicits a spike).",
+    "source": {"dandi_id": "000035", "version": "0.211014.0808", "asset_path": "sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-13_slice-20200408-slice-3_cell-20200408-sample-13_icephys.nwb", "channel": null, "window": null},
+    "redaction": ["subject"],
+    "answer_type": "multi",
+    "parts": [
+      {
+        "key": "subtype",
+        "prompt": "Classify the interneuron subtype.",
+        "answer_type": "mcq",
+        "choices": {"A": "Sst", "B": "Pvalb"},
+        "ground_truth": {"method": "cell_subtype", "params": {}}
+      },
+      {
+        "key": "rheobase",
+        "prompt": "Report the rheobase in pA.",
+        "answer_type": "numeric",
+        "tolerance": 60.0,
+        "ground_truth": {"method": "rheobase", "params": {}}
+      }
+    ]
+  },
+  {
+    "id": "C1-Q01",
+    "category": 1,
+    "title": "Brain region of unit 808 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain. Analyze single unit 808. Its anatomical location has been withheld. From the unit's peak-channel waveform (trough-to-peak width), mean firing rate, and inter-spike-interval statistics (firing regularity / bursting), infer the gross brain region in which it was recorded: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 808}}
+  },
+  {
+    "id": "C1-Q02",
+    "category": 1,
+    "title": "Brain region of unit 652 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 652 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 652}}
+  },
+  {
+    "id": "C1-Q03",
+    "category": 1,
+    "title": "Brain region of unit 568 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 568 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 568}}
+  },
+  {
+    "id": "C1-Q04",
+    "category": 1,
+    "title": "Brain region of unit 288 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 288 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 288}}
+  },
+  {
+    "id": "C1-Q05",
+    "category": 1,
+    "title": "Brain region of unit 443 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 443 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 443}}
+  },
+  {
+    "id": "C1-Q06",
+    "category": 1,
+    "title": "Brain region of unit 2219 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 2219 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 2219}}
+  },
+  {
+    "id": "C1-Q07",
+    "category": 1,
+    "title": "Brain region of unit 748 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 748 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 748}}
+  },
+  {
+    "id": "C1-Q08",
+    "category": 1,
+    "title": "Brain region of unit 710 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 710 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 710}}
+  },
+  {
+    "id": "C1-Q09",
+    "category": 1,
+    "title": "Brain region of unit 228 (ZAD-001)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 228 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 228}}
+  },
+  {
+    "id": "C1-Q10",
+    "category": 1,
+    "title": "Brain region of unit 41 (ZAD-001)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 41 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 41}}
+  },
+  {
+    "id": "C1-Q11",
+    "category": 1,
+    "title": "Brain region of unit 2413 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 2413 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 2413}}
+  },
+  {
+    "id": "C1-Q12",
+    "category": 1,
+    "title": "Brain region of unit 1727 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 1727 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 1727}}
+  },
+  {
+    "id": "C1-Q13",
+    "category": 1,
+    "title": "Brain region of unit 442 (CSHL045)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 442 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 442}}
+  },
+  {
+    "id": "C1-Q14",
+    "category": 1,
+    "title": "Brain region of unit 533 (CSHL045)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 533 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 533}}
+  },
+  {
+    "id": "C1-Q15",
+    "category": 1,
+    "title": "Brain region of unit 546 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 546 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 546}}
+  },
+  {
+    "id": "C1-Q16",
+    "category": 1,
+    "title": "Brain region of unit 499 (ZAD-029)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 499 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-029/sub-CSH-ZAD-029_ses-1ec23a70-b94b-4e9c-a0df-8c2151da3761_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 499}}
+  },
+  {
+    "id": "C1-Q17",
+    "category": 1,
+    "title": "Brain region of unit 2199 (ZAD-029)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 2199 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-029/sub-CSH-ZAD-029_ses-1ec23a70-b94b-4e9c-a0df-8c2151da3761_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 2199}}
+  },
+  {
+    "id": "C1-Q18",
+    "category": 1,
+    "title": "Brain region of unit 292 (ZAD-029)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 292 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-029/sub-CSH-ZAD-029_ses-1ec23a70-b94b-4e9c-a0df-8c2151da3761_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 292}}
+  },
+  {
+    "id": "C1-Q19",
+    "category": 1,
+    "title": "Brain region of unit 337 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 337 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 337}}
+  },
+  {
+    "id": "C1-Q20",
+    "category": 1,
+    "title": "Brain region of unit 141 (ZAD-026)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 141 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 141}}
+  },
+  {
+    "id": "C1-Q21",
+    "category": 1,
+    "title": "Brain region of unit 594 (CSHL045)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 594 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 594}}
+  },
+  {
+    "id": "C1-Q22",
+    "category": 1,
+    "title": "Brain region of unit 160 (CSHL045)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 160 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 160}}
+  },
+  {
+    "id": "C1-Q23",
+    "category": 1,
+    "title": "Brain region of unit 458 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 458 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 458}}
+  },
+  {
+    "id": "C1-Q24",
+    "category": 1,
+    "title": "Brain region of unit 1220 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 1220 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 1220}}
+  },
+  {
+    "id": "C1-Q25",
+    "category": 1,
+    "title": "Brain region of unit 672 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 672 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 672}}
+  },
+  {
+    "id": "C1-Q26",
+    "category": 1,
+    "title": "Brain region of unit 981 (ZAD-024)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 981 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 981}}
+  },
+  {
+    "id": "C1-Q27",
+    "category": 1,
+    "title": "Brain region of unit 117 (ZAD-001)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 117 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 117}}
+  },
+  {
+    "id": "C1-Q28",
+    "category": 1,
+    "title": "Brain region of unit 57 (ZAD-001)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 57 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 57}}
+  },
+  {
+    "id": "C1-Q29",
+    "category": 1,
+    "title": "Brain region of unit 352 (ZAD-001)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 352 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 352}}
+  },
+  {
+    "id": "C1-Q30",
+    "category": 1,
+    "title": "Brain region of unit 346 (ZAD-001)",
+    "prompt": "The attached NWB file is a spike-sorted Neuropixels extracellular recording from a mouse brain (unit locations withheld). Analyze single unit 346 and, from its peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting), infer the gross brain region: (A) Cortex, (B) Hippocampus, (C) Thalamus, (D) Striatum, or (E) Midbrain.",
+    "source": {"dandi_id": "000409", "version": "0.260309.1324", "asset_path": "sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb", "channel": null, "window": null},
+    "redaction": ["electrodes"],
+    "answer_type": "mcq",
+    "choices": {"A": "Cortex", "B": "Hippocampus", "C": "Thalamus", "D": "Striatum", "E": "Midbrain"},
+    "ground_truth": {"method": "unit_brain_region", "params": {"unit_id": 346}}
   }
 ]

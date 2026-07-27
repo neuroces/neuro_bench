@@ -9,6 +9,26 @@ C3-Q07,000458,0.230317.0039,sub-543393/sub-543393_ses-20200820_behavior+ecephys.
 C3-Q08,000458,0.230317.0039,sub-551397/sub-551397_ses-20210211_behavior+ecephys.nwb,4335-4365,,isoflurane_anesthesia window (delta-dominant)
 C3-Q09,000458,0.230317.0039,sub-543393/sub-543393_ses-20200820_behavior+ecephys.nwb,full,,induction-onset detection (full session)
 C3-Q10,000458,0.230317.0039,sub-546655/sub-546655_ses-20201023_behavior+ecephys.nwb,3502-3532,,"multi-part: state + dominant band"
+C3-Q11,000458,0.230317.0039,sub-569062/sub-569062_ses-20210218_behavior+ecephys.nwb,2223.5-2253.5,,awake window
+C3-Q12,000458,0.230317.0039,sub-569064/sub-569064_ses-20210408_behavior+ecephys.nwb,2246.5-2276.5,,awake window
+C3-Q13,000458,0.230317.0039,sub-569068/sub-569068_ses-20210304_behavior+ecephys.nwb,2140.3-2170.3,,awake window
+C3-Q14,000458,0.230317.0039,sub-569069/sub-569069_ses-20210312_behavior+ecephys.nwb,2111.0-2141.0,,awake window
+C3-Q15,000458,0.230317.0039,sub-569072/sub-569072_ses-20210422_behavior+ecephys.nwb,2202.0-2232.0,,awake window
+C3-Q16,000458,0.230317.0039,sub-575102/sub-575102_ses-20210603_behavior+ecephys.nwb,2290.5-2320.5,,awake window
+C3-Q17,000458,0.230317.0039,sub-571619/sub-571619_ses-20210319_behavior+ecephys.nwb,4406.7-4436.7,,isoflurane_anesthesia window
+C3-Q18,000458,0.230317.0039,sub-571620/sub-571620_ses-20210513_behavior+ecephys.nwb,4817.5-4847.5,,isoflurane_anesthesia window
+C3-Q19,000458,0.230317.0039,sub-586466/sub-586466_ses-20210729_behavior+ecephys.nwb,4780.1-4810.1,,isoflurane_anesthesia window
+C3-Q20,000458,0.230317.0039,sub-586468/sub-586468_ses-20210819_behavior+ecephys.nwb,4645.1-4675.1,,isoflurane_anesthesia window
+C3-Q21,000458,0.230317.0039,sub-569072/sub-569072_ses-20210422_behavior+ecephys.nwb,2955.2-2985.2,,isoflurane_anesthesia window
+C3-Q22,000458,0.230317.0039,sub-575102/sub-575102_ses-20210603_behavior+ecephys.nwb,3035.7-3065.7,,isoflurane_anesthesia window
+C3-Q23,000458,0.230317.0039,sub-543394/sub-543394_ses-20200827_behavior+ecephys.nwb,1187-1217,,dominant band (theta)
+C3-Q24,000458,0.230317.0039,sub-569070/sub-569070_ses-20210401_behavior+ecephys.nwb,1673.5-1703.5,,dominant band (theta)
+C3-Q25,000458,0.230317.0039,sub-543394/sub-543394_ses-20200827_behavior+ecephys.nwb,2131.8-2161.8,,dominant band (beta)
+C3-Q26,000458,0.230317.0039,sub-569062/sub-569062_ses-20210218_behavior+ecephys.nwb,3011.4-3041.4,,dominant band (delta)
+C3-Q27,000458,0.230317.0039,sub-543394/sub-543394_ses-20200827_behavior+ecephys.nwb,full,,anesthesia-onset detection (full session)
+C3-Q28,000458,0.230317.0039,sub-569064/sub-569064_ses-20210408_behavior+ecephys.nwb,full,,anesthesia-onset detection (full session)
+C3-Q29,000458,0.230317.0039,sub-569068/sub-569068_ses-20210304_behavior+ecephys.nwb,3208.3-3238.3,,"multi-part: state + dominant band"
+C3-Q30,000458,0.230317.0039,sub-569070/sub-569070_ses-20210401_behavior+ecephys.nwb,2493.9-2523.9,,"multi-part: state + dominant band"
 C2-Q01,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-10_slice-20200413-slice-2_cell-20200413-sample-10_icephys.nwb,,,Pvalb interneuron subtype
 C2-Q02,000035,0.211014.0808,sub-mouse-INETJ/sub-mouse-INETJ_ses-20200407-sample-10_slice-20200407-slice-1_cell-20200407-sample-10_icephys.nwb,,,Sst interneuron subtype
 C2-Q03,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-11_slice-20200413-slice-2_cell-20200413-sample-11_icephys.nwb,,,Pvalb interneuron subtype
@@ -19,3 +39,53 @@ C2-Q07,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-
 C2-Q08,000035,0.211014.0808,sub-mouse-NDKCQ/sub-mouse-NDKCQ_ses-20200409-sample-10_slice-20200409-slice-2_cell-20200409-sample-10_icephys.nwb,,,Sst interneuron subtype
 C2-Q09,000035,0.211014.0808,sub-mouse-INETJ/sub-mouse-INETJ_ses-20200407-sample-10_slice-20200407-slice-1_cell-20200407-sample-10_icephys.nwb,,,rheobase (numeric)
 C2-Q10,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-10_slice-20200413-slice-2_cell-20200413-sample-10_icephys.nwb,,,"multi-part: subtype + rheobase"
+C2-Q11,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-14_slice-20200413-slice-2_cell-20200413-sample-14_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q12,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-15_slice-20200413-slice-2_cell-20200413-sample-15_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q13,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-16_slice-20200413-slice-2_cell-20200413-sample-16_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q14,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-17_slice-20200413-slice-2_cell-20200413-sample-17_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q15,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-18_slice-20200413-slice-2_cell-20200413-sample-18_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q16,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-19_slice-20200413-slice-2_cell-20200413-sample-19_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q17,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-20_slice-20200413-slice-3_cell-20200413-sample-20_icephys.nwb,,,Pvalb interneuron subtype
+C2-Q18,000035,0.211014.0808,sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-10_slice-20200414-slice-2_cell-20200414-sample-10_icephys.nwb,,,Sst interneuron subtype
+C2-Q19,000035,0.211014.0808,sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-11_slice-20200414-slice-2_cell-20200414-sample-11_icephys.nwb,,,Sst interneuron subtype
+C2-Q20,000035,0.211014.0808,sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-12_slice-20200414-slice-3_cell-20200414-sample-12_icephys.nwb,,,Sst interneuron subtype
+C2-Q21,000035,0.211014.0808,sub-mouse-WPOGH/sub-mouse-WPOGH_ses-20200406-sample-10_slice-20200406-slice-3_cell-20200406-sample-10_icephys.nwb,,,Sst interneuron subtype
+C2-Q22,000035,0.211014.0808,sub-mouse-WPOGH/sub-mouse-WPOGH_ses-20200406-sample-11_slice-20200406-slice-3_cell-20200406-sample-11_icephys.nwb,,,Sst interneuron subtype
+C2-Q23,000035,0.211014.0808,sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-11_slice-20200408-slice-3_cell-20200408-sample-11_icephys.nwb,,,Sst interneuron subtype
+C2-Q24,000035,0.211014.0808,sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-12_slice-20200408-slice-3_cell-20200408-sample-12_icephys.nwb,,,Sst interneuron subtype
+C2-Q25,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-22_slice-20200413-slice-3_cell-20200413-sample-22_icephys.nwb,,,rheobase (numeric)
+C2-Q26,000035,0.211014.0808,sub-mouse-WPOGH/sub-mouse-WPOGH_ses-20200406-sample-12_slice-20200406-slice-4_cell-20200406-sample-12_icephys.nwb,,,rheobase (numeric)
+C2-Q27,000035,0.211014.0808,sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-14_slice-20200408-slice-3_cell-20200408-sample-14_icephys.nwb,,,rheobase (numeric)
+C2-Q28,000035,0.211014.0808,sub-mouse-SCEAC/sub-mouse-SCEAC_ses-20200414-sample-13_slice-20200414-slice-3_cell-20200414-sample-13_icephys.nwb,,,rheobase (numeric)
+C2-Q29,000035,0.211014.0808,sub-mouse-UEQOU/sub-mouse-UEQOU_ses-20200413-sample-21_slice-20200413-slice-3_cell-20200413-sample-21_icephys.nwb,,,"multi-part: subtype + rheobase (Pvalb)"
+C2-Q30,000035,0.211014.0808,sub-mouse-ZUDOB/sub-mouse-ZUDOB_ses-20200408-sample-13_slice-20200408-slice-3_cell-20200408-sample-13_icephys.nwb,,,"multi-part: subtype + rheobase (Sst)"
+C1-Q01,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,808,Cortex (S1) unit
+C1-Q02,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,652,Hippocampus (CA1) unit
+C1-Q03,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,568,Hippocampus (CA3) unit
+C1-Q04,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,288,Thalamus (posterior complex) unit
+C1-Q05,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,443,Thalamus (lateral dorsal nucleus) unit
+C1-Q06,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,2219,Cortex (secondary motor) unit
+C1-Q07,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,748,Striatum (caudoputamen) unit
+C1-Q08,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,710,Striatum (caudoputamen) unit
+C1-Q09,000409,0.260309.1324,sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb,,228,Midbrain unit
+C1-Q10,000409,0.260309.1324,sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb,,41,Midbrain (substantia nigra reticular) unit
+C1-Q11,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,2413,Cortex (low-rate) unit
+C1-Q12,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,1727,Cortex (broad regular-spiking) unit
+C1-Q13,000409,0.260309.1324,sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb,,442,Cortex (broad RS) unit
+C1-Q14,000409,0.260309.1324,sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb,,533,Cortex (fast-spiking) unit
+C1-Q15,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,546,Hippocampus (bursty) unit
+C1-Q16,000409,0.260309.1324,sub-CSH-ZAD-029/sub-CSH-ZAD-029_ses-1ec23a70-b94b-4e9c-a0df-8c2151da3761_desc-processed_behavior+ecephys.nwb,,499,Hippocampus (low-rate) unit
+C1-Q17,000409,0.260309.1324,sub-CSH-ZAD-029/sub-CSH-ZAD-029_ses-1ec23a70-b94b-4e9c-a0df-8c2151da3761_desc-processed_behavior+ecephys.nwb,,2199,Hippocampus (pyramidal) unit
+C1-Q18,000409,0.260309.1324,sub-CSH-ZAD-029/sub-CSH-ZAD-029_ses-1ec23a70-b94b-4e9c-a0df-8c2151da3761_desc-processed_behavior+ecephys.nwb,,292,Hippocampus (fast-spiking interneuron) unit
+C1-Q19,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,337,Thalamus (low-rate) unit
+C1-Q20,000409,0.260309.1324,sub-CSH-ZAD-026/sub-CSH-ZAD-026_ses-15763234-d21e-491f-a01b-1238eb96d389_desc-processed_behavior+ecephys.nwb,,141,Thalamus (mid-rate) unit
+C1-Q21,000409,0.260309.1324,sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb,,594,Thalamus (mid-rate) unit
+C1-Q22,000409,0.260309.1324,sub-CSHL045/sub-CSHL045_ses-034e726f-b35f-41e0-8d6c-a22cc32391fb_desc-processed_behavior+ecephys.nwb,,160,Thalamus (high-rate) unit
+C1-Q23,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,458,Striatum (low-rate MSN-like) unit
+C1-Q24,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,1220,Striatum (low-rate MSN-like) unit
+C1-Q25,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,672,Striatum (mid-rate) unit
+C1-Q26,000409,0.260309.1324,sub-CSH-ZAD-024/sub-CSH-ZAD-024_ses-8207abc6-6b23-4762-92b4-82e05bed5143_desc-processed_behavior+ecephys.nwb,,981,Striatum (fast-spiking interneuron) unit
+C1-Q27,000409,0.260309.1324,sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb,,117,Midbrain (low-rate) unit
+C1-Q28,000409,0.260309.1324,sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb,,57,Midbrain (mid-rate) unit
+C1-Q29,000409,0.260309.1324,sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb,,352,Midbrain (mid-rate) unit
+C1-Q30,000409,0.260309.1324,sub-CSH-ZAD-001/sub-CSH-ZAD-001_ses-3e7ae7c0-fe8b-487c-9354-036236fa1010_desc-processed_behavior+ecephys.nwb,,346,Midbrain (broad, high-rate) unit

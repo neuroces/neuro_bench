@@ -1,4 +1,124 @@
 {
+  "C1-Q01": {
+    "answer": "Cortex",
+    "sha256": "ebe17df9fcffd9d233bf1332f296d3db9ed812283d5b7c65fb06b72d164163ee"
+  },
+  "C1-Q02": {
+    "answer": "Hippocampus",
+    "sha256": "1793122d9fc9f2213e91aa6b2b63ef0e5156dabf7d89427c84999383e56c0af5"
+  },
+  "C1-Q03": {
+    "answer": "Hippocampus",
+    "sha256": "1793122d9fc9f2213e91aa6b2b63ef0e5156dabf7d89427c84999383e56c0af5"
+  },
+  "C1-Q04": {
+    "answer": "Thalamus",
+    "sha256": "8e76b5268deca8ffdf9637804e06c0ccb71d52a0bee9b036a254e506c1fc3739"
+  },
+  "C1-Q05": {
+    "answer": "Thalamus",
+    "sha256": "8e76b5268deca8ffdf9637804e06c0ccb71d52a0bee9b036a254e506c1fc3739"
+  },
+  "C1-Q06": {
+    "answer": "Cortex",
+    "sha256": "ebe17df9fcffd9d233bf1332f296d3db9ed812283d5b7c65fb06b72d164163ee"
+  },
+  "C1-Q07": {
+    "answer": "Striatum",
+    "sha256": "4c37c094cd6d8ae5b4dbad012503988a88881590ad17b637488d5e0d91675fff"
+  },
+  "C1-Q08": {
+    "answer": "Striatum",
+    "sha256": "4c37c094cd6d8ae5b4dbad012503988a88881590ad17b637488d5e0d91675fff"
+  },
+  "C1-Q09": {
+    "answer": "Midbrain",
+    "sha256": "7e83a364b2db548e0936703ef32a01fce0bda0036557abd6b76a92fece5a5a72"
+  },
+  "C1-Q10": {
+    "answer": "Midbrain",
+    "sha256": "7e83a364b2db548e0936703ef32a01fce0bda0036557abd6b76a92fece5a5a72"
+  },
+  "C1-Q11": {
+    "answer": "Cortex",
+    "sha256": "ebe17df9fcffd9d233bf1332f296d3db9ed812283d5b7c65fb06b72d164163ee"
+  },
+  "C1-Q12": {
+    "answer": "Cortex",
+    "sha256": "ebe17df9fcffd9d233bf1332f296d3db9ed812283d5b7c65fb06b72d164163ee"
+  },
+  "C1-Q13": {
+    "answer": "Cortex",
+    "sha256": "ebe17df9fcffd9d233bf1332f296d3db9ed812283d5b7c65fb06b72d164163ee"
+  },
+  "C1-Q14": {
+    "answer": "Cortex",
+    "sha256": "ebe17df9fcffd9d233bf1332f296d3db9ed812283d5b7c65fb06b72d164163ee"
+  },
+  "C1-Q15": {
+    "answer": "Hippocampus",
+    "sha256": "1793122d9fc9f2213e91aa6b2b63ef0e5156dabf7d89427c84999383e56c0af5"
+  },
+  "C1-Q16": {
+    "answer": "Hippocampus",
+    "sha256": "1793122d9fc9f2213e91aa6b2b63ef0e5156dabf7d89427c84999383e56c0af5"
+  },
+  "C1-Q17": {
+    "answer": "Hippocampus",
+    "sha256": "1793122d9fc9f2213e91aa6b2b63ef0e5156dabf7d89427c84999383e56c0af5"
+  },
+  "C1-Q18": {
+    "answer": "Hippocampus",
+    "sha256": "1793122d9fc9f2213e91aa6b2b63ef0e5156dabf7d89427c84999383e56c0af5"
+  },
+  "C1-Q19": {
+    "answer": "Thalamus",
+    "sha256": "8e76b5268deca8ffdf9637804e06c0ccb71d52a0bee9b036a254e506c1fc3739"
+  },
+  "C1-Q20": {
+    "answer": "Thalamus",
+    "sha256": "8e76b5268deca8ffdf9637804e06c0ccb71d52a0bee9b036a254e506c1fc3739"
+  },
+  "C1-Q21": {
+    "answer": "Thalamus",
+    "sha256": "8e76b5268deca8ffdf9637804e06c0ccb71d52a0bee9b036a254e506c1fc3739"
+  },
+  "C1-Q22": {
+    "answer": "Thalamus",
+    "sha256": "8e76b5268deca8ffdf9637804e06c0ccb71d52a0bee9b036a254e506c1fc3739"
+  },
+  "C1-Q23": {
+    "answer": "Striatum",
+    "sha256": "4c37c094cd6d8ae5b4dbad012503988a88881590ad17b637488d5e0d91675fff"
+  },
+  "C1-Q24": {
+    "answer": "Striatum",
+    "sha256": "4c37c094cd6d8ae5b4dbad012503988a88881590ad17b637488d5e0d91675fff"
+  },
+  "C1-Q25": {
+    "answer": "Striatum",
+    "sha256": "4c37c094cd6d8ae5b4dbad012503988a88881590ad17b637488d5e0d91675fff"
+  },
+  "C1-Q26": {
+    "answer": "Striatum",
+    "sha256": "4c37c094cd6d8ae5b4dbad012503988a88881590ad17b637488d5e0d91675fff"
+  },
+  "C1-Q27": {
+    "answer": "Midbrain",
+    "sha256": "7e83a364b2db548e0936703ef32a01fce0bda0036557abd6b76a92fece5a5a72"
+  },
+  "C1-Q28": {
+    "answer": "Midbrain",
+    "sha256": "7e83a364b2db548e0936703ef32a01fce0bda0036557abd6b76a92fece5a5a72"
+  },
+  "C1-Q29": {
+    "answer": "Midbrain",
+    "sha256": "7e83a364b2db548e0936703ef32a01fce0bda0036557abd6b76a92fece5a5a72"
+  },
+  "C1-Q30": {
+    "answer": "Midbrain",
+    "sha256": "7e83a364b2db548e0936703ef32a01fce0bda0036557abd6b76a92fece5a5a72"
+  },
   "C2-Q01": {
     "answer": "Pvalb",
     "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
@@ -42,6 +162,92 @@
     },
     "sha256": "78ea2aad36c838bdbd9f2f74c1dc8d1f8e870951bd90944024f27594f0134b7d"
   },
+  "C2-Q11": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q12": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q13": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q14": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q15": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q16": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q17": {
+    "answer": "Pvalb",
+    "sha256": "5e4711c21abd17f083fba311f59cc5fcf250fe5ce6f14c683deb7b08be8197a6"
+  },
+  "C2-Q18": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q19": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q20": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q21": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q22": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q23": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q24": {
+    "answer": "Sst",
+    "sha256": "fd6463240f58a851f0f3ac448b3c07f54862198955016d091b39d4042fa18658"
+  },
+  "C2-Q25": {
+    "answer": 180.0,
+    "sha256": "9598d1edef9a37c9d4a9ff783906af30933a1bdac58ec5110f1e3ddcf19bb691"
+  },
+  "C2-Q26": {
+    "answer": 80.0,
+    "sha256": "5afc581cc9ea399a2b1fa46aef3df4bea99fdbcf96285152389d9b581f8969fa"
+  },
+  "C2-Q27": {
+    "answer": 80.0,
+    "sha256": "5afc581cc9ea399a2b1fa46aef3df4bea99fdbcf96285152389d9b581f8969fa"
+  },
+  "C2-Q28": {
+    "answer": 280.0,
+    "sha256": "d3fee8034b89e70d6261e32188bdf3a7d894120ab16b0208abfb2b7d19e2bf5e"
+  },
+  "C2-Q29": {
+    "answer": {
+      "rheobase": 260.0,
+      "subtype": "Pvalb"
+    },
+    "sha256": "66294b72c5f1746b69600e3cf55df515ea3507b6a64a487364c58d6b145bcc5b"
+  },
+  "C2-Q30": {
+    "answer": {
+      "rheobase": 60.0,
+      "subtype": "Sst"
+    },
+    "sha256": "7ccadb222bb519146dcc7085936f339b90690b823b436c50d832635167868f25"
+  },
   "C3-Q01": {
     "answer": "awake",
     "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
@@ -79,6 +285,92 @@
     "sha256": "fd0f261abdffe626cbbc578ce915843688911c4131d3fbd21df1206c54c2aa43"
   },
   "C3-Q10": {
+    "answer": {
+      "band": "delta",
+      "state": "anesthetized"
+    },
+    "sha256": "201ee27415529bfecb7f536ca16cb70c515f591010b17daed10d483f170dfed5"
+  },
+  "C3-Q11": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q12": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q13": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q14": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q15": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q16": {
+    "answer": "awake",
+    "sha256": "816207863ee56b45b4ed2398ec3985bcb63e9226c7b472ef49184816abe38adb"
+  },
+  "C3-Q17": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q18": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q19": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q20": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q21": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q22": {
+    "answer": "anesthetized",
+    "sha256": "aacaabf13a87c02f02ef3e86b8b232d178f1bc7961d0d59a3a97a0ba3f71a77e"
+  },
+  "C3-Q23": {
+    "answer": "theta",
+    "sha256": "a69f9054ce1811db51e1def4225bc3df0a2df9a87cfe51b50a40044ed61f8c06"
+  },
+  "C3-Q24": {
+    "answer": "theta",
+    "sha256": "a69f9054ce1811db51e1def4225bc3df0a2df9a87cfe51b50a40044ed61f8c06"
+  },
+  "C3-Q25": {
+    "answer": "beta",
+    "sha256": "aca89214f1220d4eb23801b3f99abf16be00cd91cfcf5ca4f9ea84cd201ea9d8"
+  },
+  "C3-Q26": {
+    "answer": "delta",
+    "sha256": "66dc2f9fdeb9def9081182abe08fb65b2c4a9f090f32acc90f7326431090690b"
+  },
+  "C3-Q27": {
+    "answer": 1831.75,
+    "sha256": "bb7727a37c0da39d734148c7908607a006e6720f89b22a6aa896787ece91946d"
+  },
+  "C3-Q28": {
+    "answer": 2676.11,
+    "sha256": "25b38ea4051be807b91469be01565109e82ae654d9b00c90e7f706f62cae6aaa"
+  },
+  "C3-Q29": {
+    "answer": {
+      "band": "delta",
+      "state": "anesthetized"
+    },
+    "sha256": "201ee27415529bfecb7f536ca16cb70c515f591010b17daed10d483f170dfed5"
+  },
+  "C3-Q30": {
     "answer": {
       "band": "delta",
       "state": "anesthetized"

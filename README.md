@@ -2,7 +2,7 @@
 
 A BioMysteryBench-style evaluation benchmark for neuroscience AI, built on the [DANDI Archive](https://dandiarchive.org/).
 
-NeuroBench evaluates whether AI models can answer neurophysiology questions whose answers are anchored to **objective, externally-validated ground truth** (histology, transcriptomic cell types, expert sleep scoring, birthdate labeling) rather than to subjective interpretation. Questions use **real, messy** recordings streamed directly from DANDI, and are graded on the final answer, not the analytical path.
+NeuroBench evaluates whether AI models can answer neurophysiology questions whose answers are anchored to **objective, externally-validated ground truth** (anatomical localization, transcriptomic cell types, expert anesthesia/sleep scoring) rather than to subjective interpretation. Questions use **real, messy** recordings streamed directly from DANDI, and are graded on the final answer, not the analytical path.
 
 NeuroBench also compares two **harness architectures** on the same questions under the same scorer: a single-agent `react` loop and a role-separated, PHA-style **multi-agent** system (see [Harness architectures](#harness-architectures)).
 
@@ -12,8 +12,25 @@ See [`project3_plan.md`](project3_plan.md) for the design rationale and [`projec
 
 Under active development. Both harness arms — single-agent `react` and the
 PHA-style `multiagent` solver — are implemented and run against the currently
-authored questions (Categories 2 and 3). Expansion to Categories 1, 4 and 5 is in
-progress.
+authored questions: **30 each in Categories 1, 2 and 3 (90 total)**. Categories 4
+and 5 remain documented future work (see [`project3_plan.md`](project3_plan.md)).
+
+## Question categories
+
+Each category anchors its answer to an objective property of a real DANDI
+recording, with the ground-truth label **withheld** from the agent so the model
+must derive the answer from the signal (see [`benchmark/schema.md`](benchmark/schema.md)).
+
+| Cat | Modality (DANDI) | Withheld label | The model must infer… | From… |
+|---|---|---|---|---|
+| **1** | Neuropixels extracellular spike-sorted units — IBL Brain Wide Map (`000409`) | `electrodes.location` (anatomical region) | the unit's **gross brain region** (Cortex / Hippocampus / Thalamus / Striatum / Midbrain) | peak-channel waveform trough-to-peak width, mean firing rate, and ISI statistics (firing regularity / bursting) |
+| **2** | Whole-cell patch-clamp of single cortical interneurons — Patch-seq (`000035`) | `subject.genotype` (Cre driver line) | the **interneuron subtype** (Sst vs Pvalb), or the **rheobase** | current-clamp features: AP width, firing-pattern adaptation, rheobase, F-I curve |
+| **3** | Cortical EEG under isoflurane — simultaneous EEG/ephys (`000458`) | `intervals` (sleep/anesthesia epoch labels) | the **brain state** (awake vs anesthetized), dominant band, or anesthesia onset | spectral analysis (band powers, dominant band) of the EEG epoch |
+
+Ground truth for every question is *recomputed* from the full NWB file by a
+resolver in [`benchmark/ground_truth.py`](benchmark/ground_truth.py) and the answer
+key ([`benchmark/answers.json`](benchmark/answers.json)) is generated from those
+resolvers, never hand-typed. Run one category with `--category {1,2,3}`.
 
 ## Repository layout
 

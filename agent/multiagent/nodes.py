@@ -104,6 +104,45 @@ _CRITIC_SYSTEM = (
 )
 
 
+# Per-category domain guidance appended to the Data Scientist and Domain Expert
+# system prompts. Keeps the multiagent roles category-aware (mirroring the react
+# arm's ``_prompt_for``) without leaking any withheld label.
+_DOMAIN_HINTS: dict[int, str] = {
+    1: (
+        "\n\nDomain guidance (spike-sorted extracellular units -> gross brain "
+        "region). For each unit measure and weigh THREE features together: "
+        "peak-channel waveform trough-to-peak width, mean firing rate, and ISI "
+        "regularity (coefficient of variation / bursting). Signatures: Cortex -- "
+        "broad waveforms (>~0.5 ms) at low-to-moderate rate (regular-spiking), or "
+        "narrow and faster (fast-spiking); a broad waveform favors cortex or "
+        "hippocampus, NOT thalamus or midbrain. Hippocampus -- bursty at moderate "
+        "rate, often broader cortex-like waveforms. Thalamus -- high rate AND "
+        "irregular/bursty (high ISI CV); reserve this label for units that are BOTH "
+        "fast AND irregular. Striatum -- moderate rate and regularity, often "
+        "narrower waveforms. Midbrain (e.g. substantia nigra) -- very high, "
+        "sustained, REGULAR/tonic rate (LOW ISI CV). Do NOT default to thalamus for "
+        "every high-rate or bursty unit: if the waveform is broad favor "
+        "cortex/hippocampus, and if the rate is very high but regular favor midbrain."
+    ),
+    2: (
+        "\n\nDomain guidance (whole-cell patch-clamp interneuron -> Cre line). "
+        "Fast-spiking, non-adapting cells with narrow action potentials and high "
+        "rheobase are typically Pvalb; adapting cells with broader spikes and lower "
+        "rheobase are typically Sst."
+    ),
+    3: (
+        "\n\nDomain guidance (cortical EEG -> brain state). Isoflurane anesthesia "
+        "shifts spectral power toward high-amplitude, low-frequency (delta, 0.5-4 "
+        "Hz) activity; the awake cortex shows relatively more higher-frequency "
+        "(theta/beta) power and lower delta dominance."
+    ),
+}
+
+
+def _domain_hint(category: int | None) -> str:
+    return _DOMAIN_HINTS.get(category, "") if category is not None else ""
+
+
 # ---------------------------------------------------------------------------
 # Nodes
 # ---------------------------------------------------------------------------
@@ -142,7 +181,7 @@ async def data_scientist_node(state: MultiAgentState) -> dict:
             f"{revise_note}"
         )
     )
-    msgs = [ChatMessageSystem(content=_DS_SYSTEM), user]
+    msgs = [ChatMessageSystem(content=_DS_SYSTEM + _domain_hint(state.get("category"))), user]
 
     output = None
     for step in range(max_steps):
@@ -156,9 +195,7 @@ async def data_scientist_node(state: MultiAgentState) -> dict:
     else:
         # Hit the step budget with tool calls pending — force a text summary.
         msgs.append(
-            ChatMessageUser(
-                content="Stop calling tools now and summarize your measurements."
-            )
+            ChatMessageUser(content="Stop calling tools now and summarize your measurements.")
         )
         output = await model.generate(input=msgs, tools=[])
 
@@ -177,7 +214,10 @@ async def domain_expert_node(state: MultiAgentState) -> dict:
         )
     )
     output = await model.generate(
-        input=[ChatMessageSystem(content=_EXPERT_SYSTEM), user]
+        input=[
+            ChatMessageSystem(content=_EXPERT_SYSTEM + _domain_hint(state.get("category"))),
+            user,
+        ]
     )
     interp = _parse_model(output.completion, ExpertInterpretation)
     if interp is None:
@@ -200,9 +240,7 @@ async def critic_node(state: MultiAgentState) -> dict:
             f"Draft answer:\n{state.get('draft_answer', '')}"
         )
     )
-    output = await model.generate(
-        input=[ChatMessageSystem(content=_CRITIC_SYSTEM), user]
-    )
+    output = await model.generate(input=[ChatMessageSystem(content=_CRITIC_SYSTEM), user])
     decision = _parse_model(output.completion, CriticDecision)
     if decision is None:
         decision = CriticDecision(

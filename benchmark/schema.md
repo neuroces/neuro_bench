@@ -26,7 +26,7 @@ fields and the integrity model.
 | `title` | no | Short human label. |
 | `prompt` | yes | Question text shown to the model. |
 | `source` | yes | Which asset/window/channel the question is about (below). |
-| `redaction` | no | NWB parts to withhold from the model (`intervals`/`units`/`processing`). |
+| `redaction` | no | NWB parts to withhold from the model (`intervals`/`units`/`processing`/`subject`/`electrodes`). |
 | `answer_type` | yes | `mcq`, `exact`, `numeric`, or `multi`. |
 | `choices` | mcq | Map of choice key → label. |
 | `tolerance` | numeric | Absolute tolerance for numeric grading. |
@@ -48,6 +48,19 @@ fields and the integrity model.
 | `induction_onset_time` | float seconds | — |
 | `eeg_channel_count` | int | — |
 | `dominant_band` | `"delta"`/`"theta"`/`"alpha"`/`"beta"` | `start_s`, `duration_s`, `channel` |
+
+### `ground_truth` methods (Category 1 — Neuropixels extracellular)
+| Method | Returns | Params |
+|---|---|---|
+| `unit_brain_region` | gross region string (`"Cortex"`/`"Hippocampus"`/`"Thalamus"`/`"Striatum"`/`"Midbrain"`) | `unit_id` |
+
+`unit_brain_region` reads the unit's peak channel (`units.max_electrode`), looks up
+that electrode's `electrodes.location` (a fine Allen label), and normalizes it to a
+gross region via `coarse_brain_region`. The `electrodes` table (and therefore the
+region) is listed in `redaction`, so the model must infer the region from the
+unit's waveform shape and firing statistics instead of reading it. The resolver
+raises `ValueError` if the peak channel is outside the target gross regions (e.g. a
+fiber tract or ventricle), so such units are never authored as questions.
 
 ## Answer types & grading
 

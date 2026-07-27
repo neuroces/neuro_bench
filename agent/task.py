@@ -40,7 +40,40 @@ CAT2_PROMPT = (
 )
 
 
+CAT1_PROMPT = (
+    "You are a computational neurophysiologist analyzing spike-sorted single units "
+    "from a Neuropixels extracellular recording. The anatomical location of each "
+    "unit is withheld: infer its gross brain region from the unit's "
+    "electrophysiology using the tools. Always measure ALL THREE features before "
+    "deciding and weigh them jointly (no single feature is decisive): (1) "
+    "peak-channel waveform trough-to-peak width, (2) mean firing rate, and (3) ISI "
+    "statistics / firing regularity (coefficient of variation, bursting).\n"
+    "Distinguishing signatures:\n"
+    "- Cortex: heterogeneous. Regular-spiking (excitatory) units have BROAD "
+    "waveforms (>~0.5 ms) at low-to-moderate rates; fast-spiking interneurons are "
+    "narrow and faster. A broad waveform points to cortex or hippocampus, NOT "
+    "thalamus or midbrain.\n"
+    "- Hippocampus: pyramidal units are bursty at moderate rates, often with "
+    "broader, cortex-like waveforms; separate from thalamus by lower sustained rate "
+    "and the waveform shape.\n"
+    "- Thalamus: high rate combined with IRREGULAR / bursty firing (high ISI CV). "
+    "Reserve this label for units that are BOTH fast AND irregular.\n"
+    "- Striatum: mixed population at moderate rates and moderate regularity, often "
+    "with narrower waveforms; use it when a unit fits none of the more distinctive "
+    "profiles.\n"
+    "- Midbrain (e.g. substantia nigra): very high, sustained rate (often the "
+    "highest) that is REGULAR / tonic (LOW ISI CV) — the low CV is what separates it "
+    "from the irregular thalamus.\n"
+    "Caution: high firing rate or bursting alone does NOT imply thalamus. If the "
+    "waveform is broad, favor cortex/hippocampus; if the rate is very high but "
+    "regular, favor midbrain. Reason explicitly about width, rate, and regularity "
+    "together, then give your final answer on an 'ANSWER:' line."
+)
+
+
 def _prompt_for(category: int | None) -> str:
+    if category == 1:
+        return CAT1_PROMPT
     if category == 2:
         return CAT2_PROMPT
     if category == 3:
@@ -50,12 +83,14 @@ def _prompt_for(category: int | None) -> str:
 
 GENERAL_PROMPT = (
     "You are a computational neurophysiologist. Each question concerns a real "
-    "electrophysiology recording (an EEG epoch, or a single-cell patch-clamp "
-    "recording) with the ground-truth label withheld. Use the analysis tools to "
-    "examine the signal (spectral analysis for EEG; AP width, firing pattern, "
-    "rheobase and the F-I curve for patch-clamp), reason about the "
-    "electrophysiology, and infer the answer from the data rather than looking it "
-    "up. Give your final answer on an 'ANSWER:' line in the requested format."
+    "electrophysiology recording (an EEG epoch, a single-cell patch-clamp "
+    "recording, or spike-sorted Neuropixels units) with the ground-truth label "
+    "withheld. Use the analysis tools to examine the signal (spectral analysis for "
+    "EEG; AP width, firing pattern, rheobase and the F-I curve for patch-clamp; "
+    "waveform width, firing rate and ISI statistics for extracellular units), reason "
+    "about the electrophysiology, and infer the answer from the data rather than "
+    "looking it up. Give your final answer on an 'ANSWER:' line in the requested "
+    "format."
 )
 
 

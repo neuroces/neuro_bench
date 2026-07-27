@@ -123,6 +123,49 @@ def compute_isi():
 
 
 @tool
+def get_spike_waveforms():
+    async def execute(unit_ids: list[int]) -> str:
+        """Return each unit's peak-channel mean waveform (µV) and its sampling rate.
+
+        Args:
+            unit_ids: List of unit ids to fetch waveforms for.
+        """
+        return _safe("get_spike_waveforms", unit_ids)
+
+    return execute
+
+
+@tool
+def compute_waveform_features():
+    async def execute(unit_id: int) -> str:
+        """Return peak-channel waveform features (trough-to-peak width in ms) for one unit.
+
+        Args:
+            unit_id: The unit id.
+        """
+        return _safe("compute_waveform_features", unit_id)
+
+    return execute
+
+
+@tool
+def compute_firing_rate():
+    async def execute(
+        unit_id: int, start_s: float | None = None, stop_s: float | None = None
+    ) -> str:
+        """Return a unit's mean firing rate (Hz) over an interval (default: full span).
+
+        Args:
+            unit_id: The unit id.
+            start_s: Interval start in seconds (optional).
+            stop_s: Interval end in seconds (optional).
+        """
+        return _safe("compute_firing_rate", unit_id, start_s, stop_s)
+
+    return execute
+
+
+@tool
 def run_python():
     async def execute(code: str, timeout_s: int = 20) -> str:
         """Run analysis code in a sandbox with the EEG signal exposed as `eeg` (rate `fs`).
@@ -183,18 +226,35 @@ def cat2_tools() -> list:
     ]
 
 
+def cat1_tools() -> list:
+    """Tool set for the Neuropixels extracellular (Category 1) region questions."""
+    return [
+        describe_recording(),
+        list_units(),
+        get_spike_waveforms(),
+        compute_waveform_features(),
+        compute_firing_rate(),
+        compute_isi(),
+    ]
+
+
 def tools_for(category: int | None) -> list:
     """Select the tool set appropriate to a question category."""
+    if category == 1:
+        return cat1_tools()
     if category == 2:
         return cat2_tools()
     if category == 3:
         return all_tools()
-    # Mixed / all-category run: expose both EEG and patch-clamp tools.
+    # Mixed / all-category run: expose EEG, patch-clamp and extracellular tools.
     return [
         describe_recording(),
         get_eeg_epoch(),
         compute_psd(),
         list_units(),
+        get_spike_waveforms(),
+        compute_waveform_features(),
+        compute_firing_rate(),
         compute_isi(),
         list_current_clamp_sweeps(),
         get_current_clamp_sweep(),

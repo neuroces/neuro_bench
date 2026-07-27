@@ -1,27 +1,91 @@
 {
   "model": "anthropic/claude-sonnet-5",
   "arch": "multiagent",
-  "category": 3,
-  "n_questions": 2,
-  "mean_score": 1.0,
+  "category": 1,
+  "n_questions": 10,
+  "mean_score": 0.2,
   "status": "success",
-  "log_location": "/Users/cechava/Documents/neuro_bench/logs/2026-07-23T21-05-18-00-00_neurobench-multiagent_Mm6m5Atf2XRBt7VXRufGdQ.eval",
+  "log_location": "/Users/cechava/Documents/neuro_bench/logs/2026-07-27T14-28-01-00-00_neurobench-multiagent_jGyi7fK4YH5H7EYC4tpfcW.eval",
   "results": [
     {
-      "id": "C3-Q01",
-      "category": 3,
+      "id": "C1-Q01",
+      "category": 1,
       "answer_type": "mcq",
-      "score": 1.0,
-      "answer": "A",
-      "truth": "awake"
+      "score": 0.0,
+      "answer": "B",
+      "truth": "Cortex"
     },
     {
-      "id": "C3-Q02",
-      "category": 3,
+      "id": "C1-Q02",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "C",
+      "truth": "Hippocampus"
+    },
+    {
+      "id": "C1-Q03",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "C",
+      "truth": "Hippocampus"
+    },
+    {
+      "id": "C1-Q04",
+      "category": 1,
       "answer_type": "mcq",
       "score": 1.0,
-      "answer": "B",
-      "truth": "anesthetized"
+      "answer": "C",
+      "truth": "Thalamus"
+    },
+    {
+      "id": "C1-Q05",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 1.0,
+      "answer": "C",
+      "truth": "Thalamus"
+    },
+    {
+      "id": "C1-Q06",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "C",
+      "truth": "Cortex"
+    },
+    {
+      "id": "C1-Q07",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "C",
+      "truth": "Striatum"
+    },
+    {
+      "id": "C1-Q08",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "C",
+      "truth": "Striatum"
+    },
+    {
+      "id": "C1-Q09",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "C",
+      "truth": "Midbrain"
+    },
+    {
+      "id": "C1-Q10",
+      "category": 1,
+      "answer_type": "mcq",
+      "score": 0.0,
+      "answer": "C",
+      "truth": "Midbrain"
     }
   ]
 }

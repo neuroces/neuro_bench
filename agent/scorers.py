@@ -18,7 +18,7 @@ from inspect_ai.solver import TaskState
 _ANSWER_RE = re.compile(r"ANSWER:\s*(.+)", re.IGNORECASE)
 _ANSWER_TAG_RE = re.compile(r"<answer>\s*(.*?)\s*</answer>", re.IGNORECASE | re.DOTALL)
 _TAG_RE = re.compile(r"<[^>]+>")
-_CHOICE_RE = re.compile(r"\b([A-Da-d])\b")
+_CHOICE_RE = re.compile(r"\b([A-Ea-e])\b")
 
 
 def _mcq_token(text: str) -> str:
@@ -88,9 +88,7 @@ def neurobench_scorer():
     async def score(state: TaskState, target: Target) -> Score:
         meta = state.metadata
         answer_type = meta["answer_type"]
-        extracted = extract_answer(
-            state.output.completion, answer_type, meta.get("parts")
-        )
+        extracted = extract_answer(state.output.completion, answer_type, meta.get("parts"))
         question = {
             "answer_type": answer_type,
             "choices": meta.get("choices"),

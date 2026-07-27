@@ -62,9 +62,7 @@ def eeg_window(nwb, start_s: float, duration_s: float, channel: int = 0):
     return np.asarray(es.data[i0:i1, channel], dtype=float), fs
 
 
-def _band_powers(
-    nwb, start_s: float, duration_s: float, channel: int
-) -> dict[str, float]:
+def _band_powers(nwb, start_s: float, duration_s: float, channel: int) -> dict[str, float]:
     import numpy as np
     from scipy import signal
 
@@ -143,9 +141,7 @@ def eeg_channel_count(nwb, **_: Any) -> int:
     return int(_eeg_series(nwb).data.shape[1])
 
 
-def dominant_band(
-    nwb, start_s: float, duration_s: float, channel: int = 0, **_: Any
-) -> str:
+def dominant_band(nwb, start_s: float, duration_s: float, channel: int = 0, **_: Any) -> str:
     """Name of the highest-power canonical band in the given EEG window."""
     powers = _band_powers(nwb, start_s, duration_s, channel)
     return max(powers, key=powers.get)
@@ -159,7 +155,16 @@ _SPIKE_THRESHOLD_MV = -10.0
 
 # Cre driver markers that identify GABAergic (inhibitory) interneurons.
 _INHIBITORY_MARKERS = {
-    "Sst", "Pvalb", "Vip", "Htr3a", "Ndnf", "Lamp5", "Chodl", "Gad2", "Chat", "Chrna2",
+    "Sst",
+    "Pvalb",
+    "Vip",
+    "Htr3a",
+    "Ndnf",
+    "Lamp5",
+    "Chodl",
+    "Gad2",
+    "Chat",
+    "Chrna2",
 }
 
 
@@ -209,8 +214,12 @@ def icephys_sweeps(nwb) -> list[dict[str, Any]]:
         dev = np.abs(s - base) > 5.0
         dur = float(np.sum(dev) / rate) if rate else float("nan")
         sweeps.append(
-            {"index": i, "injected_pA": round(inj, 1), "n_spikes": count_spikes(v),
-             "pulse_s": round(dur, 4)}
+            {
+                "index": i,
+                "injected_pA": round(inj, 1),
+                "n_spikes": count_spikes(v),
+                "pulse_s": round(dur, 4),
+            }
         )
     return sweeps
 
@@ -234,7 +243,9 @@ def cell_class(nwb, **_: Any) -> str:
 
 def rheobase(nwb, **_: Any) -> float:
     """Minimum positive current step (pA) that elicits at least one spike."""
-    spiking = [s["injected_pA"] for s in icephys_sweeps(nwb) if s["injected_pA"] > 0 and s["n_spikes"] > 0]
+    spiking = [
+        s["injected_pA"] for s in icephys_sweeps(nwb) if s["injected_pA"] > 0 and s["n_spikes"] > 0
+    ]
     if not spiking:
         raise ValueError("no spiking sweep found")
     return round(min(spiking), 1)
@@ -251,6 +262,193 @@ def firing_rate_at_current(nwb, current_pA: float, tol_pA: float = 15.0, **_: An
     return round(sweep["n_spikes"] / sweep["pulse_s"], 2)
 
 
+# --- extracellular Neuropixels spike sorting (Category 1) --------------------
+
+# Mean-waveform sampling rate for DANDI 000409 (IBL Brain Wide Map): the
+# spike-sorted templates are stored at the Neuropixels AP-band rate.
+WAVEFORM_FS_HZ = 30000.0
+
+# Non-neural electrode labels (fiber tracts, ventricles, out-of-brain). A unit
+# whose peak channel sits here is not a valid brain-region question.
+_NON_BRAIN_LOCATIONS = {"void", "root"}
+
+
+def coarse_brain_region(location: str) -> str | None:
+    """Normalize a fine Allen ``electrodes.location`` label to a gross region.
+
+    Waveform shape and firing statistics carry gross-region signatures (cortex vs
+    hippocampus vs thalamus vs striatum vs midbrain) but not fine Allen subnuclei,
+    so ground truth is defined at the gross level. Returns ``None`` for labels
+    outside the target set (fiber tracts, ventricles, olfactory/amygdala, etc.) so
+    the resolver can reject them rather than author an unanswerable question.
+    """
+    l = location.lower().strip()
+    if l.startswith("field ca") or "dentate gyrus" in l or l == "subiculum" or "fasciola" in l:
+        return "Hippocampus"
+    if "thalamus" in l or "geniculate" in l:
+        return "Thalamus"
+    if l == "caudoputamen":
+        return "Striatum"
+    if (
+        "midbrain" in l
+        or "substantia nigra" in l
+        or "ventral tegmental" in l
+        or "colliculus" in l
+        or "pretectal" in l
+        or "periaqueduct" in l
+    ):
+        return "Midbrain"
+    if "area" in l and "layer" in l and "entorhinal" not in l:
+        return "Cortex"
+    return None
+
+
+def _units_table(nwb):
+    units = getattr(nwb, "units", None)
+    if units is None:
+        raise KeyError("NWB file has no units table")
+    return units
+
+
+def _unit_row(units, unit_id: int) -> int:
+    """Row index of a unit given its units-table id (ids are not 0-based)."""
+    ids = [int(i) for i in units.id[:]]
+    try:
+        return ids.index(int(unit_id))
+    except ValueError as exc:
+        raise KeyError(f"unit_id {unit_id} not in units table") from exc
+
+
+def unit_peak_electrode(nwb, unit_id: int) -> int:
+    """Electrode id of a unit's peak (max-amplitude) channel."""
+    units = _units_table(nwb)
+    if "max_electrode" not in units.colnames:
+        raise KeyError("units table has no 'max_electrode' column")
+    row = _unit_row(units, unit_id)
+    return int(units["max_electrode"].data[row])
+
+
+def _electrode_location(nwb, electrode_id: int) -> str:
+    el = getattr(nwb, "electrodes", None)
+    if el is None:
+        raise KeyError("NWB file has no electrodes table")
+    if "location" not in el.colnames:
+        raise KeyError("electrodes table has no 'location' column")
+    ids = [int(i) for i in el.id[:]]
+    try:
+        row = ids.index(int(electrode_id))
+    except ValueError as exc:
+        raise KeyError(f"electrode {electrode_id} not in electrodes table") from exc
+    return str(el["location"].data[row])
+
+
+def unit_spike_times(nwb, unit_id: int):
+    """Sorted spike times (s) for one unit."""
+    import numpy as np
+
+    units = _units_table(nwb)
+    if "spike_times" not in units.colnames:
+        raise KeyError("units table has no 'spike_times' column")
+    row = _unit_row(units, unit_id)
+    return np.sort(np.asarray(units["spike_times"][row], dtype=float))
+
+
+def unit_waveform_mean(nwb, unit_id: int):
+    """Mean waveform for one unit (samples x channels, may contain NaN padding)."""
+    import numpy as np
+
+    units = _units_table(nwb)
+    if "waveform_mean" not in units.colnames:
+        raise KeyError("units table has no 'waveform_mean' column")
+    row = _unit_row(units, unit_id)
+    return np.asarray(units["waveform_mean"][row], dtype=float)
+
+
+def peak_channel_waveform(waveform):
+    """Reduce a (samples x channels) mean waveform to its peak-channel trace.
+
+    The peak channel is the one with the largest peak-to-peak amplitude; NaN
+    padding (channels/samples not stored) is ignored.
+    """
+    import numpy as np
+
+    w = np.asarray(waveform, dtype=float)
+    if w.ndim == 1:
+        trace = w
+    else:
+        valid = ~np.all(np.isnan(w), axis=0)  # drop all-NaN (unstored) channels
+        p2p = np.full(w.shape[1], -np.inf)
+        p2p[valid] = np.nanmax(w[:, valid], axis=0) - np.nanmin(w[:, valid], axis=0)
+        pc = int(np.argmax(p2p))
+        trace = w[:, pc]
+    return trace[~np.isnan(trace)]
+
+
+def waveform_peak_trough_width_ms(waveform, fs: float = WAVEFORM_FS_HZ) -> float:
+    """Trough-to-peak duration (ms) of a unit's peak-channel mean waveform.
+
+    A classic extracellular feature: narrow (<~0.4 ms) marks fast-spiking
+    (putative inhibitory) units, broad (>~0.5 ms) marks regular-spiking units.
+    """
+    import numpy as np
+
+    trace = peak_channel_waveform(waveform)
+    if trace.size < 3:
+        raise ValueError("waveform too short to measure peak-trough width")
+    trough = int(np.argmin(trace))
+    after = trace[trough:]
+    peak = trough + int(np.argmax(after))
+    return round((peak - trough) / fs * 1000.0, 4)
+
+
+def extracellular_firing_rate(
+    nwb, unit_id: int, start_s: float | None = None, stop_s: float | None = None
+) -> float:
+    """Mean firing rate (Hz) of a unit over [start_s, stop_s] (default: full span)."""
+    import numpy as np
+
+    st = unit_spike_times(nwb, unit_id)
+    if st.size == 0:
+        return 0.0
+    lo = float(st[0]) if start_s is None else float(start_s)
+    hi = float(st[-1]) if stop_s is None else float(stop_s)
+    if hi <= lo:
+        raise ValueError("stop_s must be greater than start_s")
+    n = int(np.sum((st >= lo) & (st <= hi)))
+    return round(n / (hi - lo), 3)
+
+
+def unit_isi_stats(nwb, unit_id: int) -> dict[str, Any]:
+    """Inter-spike-interval statistics (mean ISI, CV) for one unit."""
+    import numpy as np
+
+    st = unit_spike_times(nwb, unit_id)
+    isi = np.diff(st)
+    return {
+        "n_spikes": int(st.size),
+        "mean_isi_s": float(isi.mean()) if isi.size else None,
+        "cv_isi": float(isi.std() / isi.mean()) if isi.size and isi.mean() else None,
+    }
+
+
+def unit_brain_region(nwb, unit_id: int, **_: Any) -> str:
+    """Gross brain region of a unit, from its peak channel's ``electrodes.location``.
+
+    Ground truth for Category 1: resolved from the (withheld) electrodes table so
+    the model must infer it from waveform shape + firing statistics instead.
+    Raises ``KeyError`` if the required tables/columns are missing and
+    ``ValueError`` if the peak channel is not in a target gross region.
+    """
+    peak = unit_peak_electrode(nwb, unit_id)
+    location = _electrode_location(nwb, peak)
+    region = coarse_brain_region(location)
+    if region is None:
+        raise ValueError(
+            f"unit {unit_id} peak channel is in {location!r}, not a target brain region"
+        )
+    return region
+
+
 RESOLVERS: dict[str, Callable[..., Any]] = {
     "state_at_window": state_at_window,
     "induction_onset_time": induction_onset_time,
@@ -261,6 +459,7 @@ RESOLVERS: dict[str, Callable[..., Any]] = {
     "cell_class": cell_class,
     "rheobase": rheobase,
     "firing_rate_at_current": firing_rate_at_current,
+    "unit_brain_region": unit_brain_region,
 }
 
 
@@ -268,9 +467,7 @@ def resolve(nwb, ground_truth: dict[str, Any]) -> Any:
     """Dispatch a ``ground_truth`` spec ({'method':..., 'params':{...}}) to its resolver."""
     method = ground_truth["method"]
     if method not in RESOLVERS:
-        raise KeyError(
-            f"Unknown ground-truth method {method!r}; known: {sorted(RESOLVERS)}"
-        )
+        raise KeyError(f"Unknown ground-truth method {method!r}; known: {sorted(RESOLVERS)}")
     params = ground_truth.get("params", {})
     return RESOLVERS[method](nwb, **params)
 
